@@ -1,0 +1,155 @@
+/* 냥냥 배움놀이터 소개 페이지. 색은 앱의 DrawKit 팔레트 그대로 — 페이지가 곧 앱의 연장이라서.
+   앱이 늘 같은 크림색이듯 이 페이지도 한 가지 모습만 갖는다(어두운 테마 없음). */
+:root {
+  color-scheme: light;
+  --cream: #FFF7E2;
+  --card: #FFFFFF;
+  --ink: #483A49;
+  --muted: #7F7581;
+  --line: #EFE4CC;
+  --peach: #FFAD8F;
+  --pink: #FF87AA;
+  --blue: #69BEEB;
+  --green: #70CA97;
+  --yellow: #FFD252;
+  --purple: #9A86DC;
+  --ink-on-blue: #1F5A7A;
+  --shadow: 0 2px 6px rgba(72, 58, 73, .06), 0 18px 40px -22px rgba(72, 58, 73, .25);
+  --f-display: 'Jua', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --f-body: 'Noto Sans KR', -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--ink-on-blue); }
+
+/* ── 언어 전환: html[lang] 이 스위치다 ─────────────────────────────── */
+html[lang="ko"] .en { display: none !important; }
+html[lang="en"] .ko { display: none !important; }
+
+/* ── 머리 ────────────────────────────────────────────────────────── */
+.site {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 16px;
+  padding: 10px 20px;
+  background: rgba(255, 247, 226, .92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-family: var(--f-display); font-size: 21px; }
+.brand img { width: 36px; height: 36px; border-radius: 10px; }
+.site nav { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
+.site nav a { text-decoration: none; color: var(--ink); padding: 6px 11px; border-radius: 999px; font-size: 15px; }
+.site nav a:hover { background: #FFF0C8; }
+.lang {
+  font: inherit; font-size: 14px; font-weight: 600;
+  border: 1.5px solid var(--ink); background: var(--card); color: var(--ink);
+  border-radius: 999px; padding: 5px 12px; cursor: pointer; white-space: nowrap;
+}
+.lang:hover { background: var(--yellow); }
+.lang:focus-visible, .site nav a:focus-visible, .badge:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+.page { max-width: 1060px; margin: 0 auto; padding: 0 20px 90px; }
+
+/* ── 첫 화면 ─────────────────────────────────────────────────────── */
+.hero {
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center;
+  padding: 56px 0 30px; position: relative;
+}
+.hero::before, .hero::after {
+  content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(2px);
+}
+.hero::before { width: 320px; height: 320px; left: -140px; top: 20px; background: rgba(255, 173, 143, .28); }
+.hero::after { width: 260px; height: 260px; right: -60px; bottom: -40px; background: rgba(105, 190, 235, .22); }
+.kicker { display: inline-block; background: var(--yellow); color: var(--ink); font-weight: 700; font-size: 14px; padding: 4px 12px; border-radius: 999px; letter-spacing: .02em; }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(36px, 6vw, 58px); line-height: 1.15; margin: 14px 0 12px; text-wrap: balance; }
+.sub { font-size: 19px; color: var(--muted); margin: 0 0 22px; max-width: 34em; }
+.badges { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 0 14px; }
+.badge img { height: 58px; width: auto; }
+.badge { display: inline-block; line-height: 0; border-radius: 10px; }
+.badge.soon { opacity: .9; cursor: default; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 0; padding: 0; list-style: none; }
+.chips li { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: 14px; color: var(--muted); }
+.phone {
+  justify-self: center; width: min(300px, 80%);
+  border-radius: 34px; padding: 12px; background: #2B2230;
+  box-shadow: 0 30px 60px -30px rgba(43, 34, 48, .6);
+  transform: rotate(-3deg);
+}
+.phone img { border-radius: 24px; }
+
+/* ── 스크린샷 띠 ─────────────────────────────────────────────────── */
+.strip { display: flex; gap: 16px; overflow-x: auto; padding: 10px 4px 22px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.strip figure { flex: 0 0 200px; margin: 0; scroll-snap-align: start; }
+.strip img { border-radius: 18px; box-shadow: var(--shadow); }
+.strip figcaption { text-align: center; font-size: 14px; color: var(--muted); margin-top: 8px; }
+
+/* ── 블록 ────────────────────────────────────────────────────────── */
+.block { padding: 44px 0 10px; }
+h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(27px, 3.6vw, 36px); margin: 0 0 6px; }
+.lead { color: var(--muted); font-size: 18px; margin: 0 0 22px; max-width: 40em; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.card {
+  background: var(--card); border-radius: 22px; padding: 20px 20px 18px;
+  box-shadow: var(--shadow); border-top: 6px solid var(--tint, var(--yellow));
+}
+.card .icon { font-size: 34px; line-height: 1; margin-bottom: 8px; font-family: var(--f-display); }
+.card h3 { margin: 0 0 6px; font-size: 19px; }
+.card p { margin: 0; color: var(--muted); font-size: 15.5px; line-height: 1.6; }
+.card.wide { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; border-top-color: var(--purple); }
+.tint-peach { --tint: var(--peach); } .tint-pink { --tint: var(--pink); } .tint-blue { --tint: var(--blue); }
+.tint-green { --tint: var(--green); } .tint-yellow { --tint: var(--yellow); } .tint-purple { --tint: var(--purple); }
+
+.tablewrap { overflow-x: auto; background: var(--card); border-radius: 22px; box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; font-size: 15.5px; }
+th, td { text-align: left; padding: 13px 18px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: #FFF3D6; font-weight: 700; }
+tr:last-child td { border-bottom: 0; }
+
+.note { display: flex; gap: 12px; align-items: flex-start; background: #E9F6FF; border-radius: 18px; padding: 16px 20px; margin-top: 18px; font-size: 15.5px; }
+.note b { color: var(--ink-on-blue); white-space: nowrap; }
+
+.banner { border-radius: 24px; box-shadow: var(--shadow); margin: 6px 0 22px; }
+
+details { background: var(--card); border-radius: 18px; padding: 4px 20px; margin-bottom: 10px; box-shadow: var(--shadow); }
+summary { cursor: pointer; font-weight: 700; padding: 12px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--muted); font-family: var(--f-display); font-size: 22px; }
+details[open] summary::after { content: "−"; }
+details p { margin: 0 0 14px; color: var(--muted); }
+
+.contact { background: linear-gradient(135deg, #FFE7D8, #E4F4FF); border-radius: 26px; padding: 32px; text-align: center; }
+.contact .mail { display: inline-block; margin-top: 10px; font-family: var(--f-display); font-size: 24px; text-decoration: none; color: var(--ink); background: var(--card); padding: 10px 22px; border-radius: 999px; box-shadow: var(--shadow); }
+
+footer { text-align: center; color: var(--muted); font-size: 14px; padding: 40px 20px 0; }
+footer a { color: var(--muted); }
+
+/* ── 법률 문서(개인정보) ─────────────────────────────────────────── */
+.doc { max-width: 780px; margin: 0 auto; padding: 40px 20px 90px; }
+.doc article { background: var(--card); border-radius: 26px; padding: 36px 34px; box-shadow: var(--shadow); }
+.doc h1 { font-size: clamp(30px, 5vw, 42px); margin: 0 0 4px; }
+.doc .updated { color: var(--muted); margin: 0 0 24px; }
+.doc h2 { font-size: 22px; margin: 30px 0 8px; }
+.doc p, .doc li { font-size: 16px; }
+.doc ul { padding-left: 22px; }
+.doc table { font-size: 15px; }
+
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 30px; }
+  .phone { transform: none; width: min(240px, 70%); }
+  .site nav { display: none; }
+  .card.wide { grid-template-columns: 1fr; }
+  .doc article { padding: 26px 20px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
