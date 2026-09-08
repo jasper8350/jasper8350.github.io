@@ -1,7 +1,17 @@
+[한국어]
 소개 페이지        https://jasper8350.github.io/howtoo/
 사용 안내          https://jasper8350.github.io/howtoo/guide.html
 개인정보처리방침    https://jasper8350.github.io/howtoo/privacy.html
 이용약관           https://jasper8350.github.io/howtoo/terms.html
 계정·데이터 삭제    https://jasper8350.github.io/howtoo/account-deletion.html
 오픈소스 라이선스   https://jasper8350.github.io/howtoo/oss-licenses.html
+
+[English] — App Store 심사·영어권 스토어 등록에 쓴다
+Overview           https://jasper8350.github.io/howtoo/en/
+Guide              https://jasper8350.github.io/howtoo/en/guide.html
+Privacy Policy     https://jasper8350.github.io/howtoo/en/privacy.html
+Terms of Service   https://jasper8350.github.io/howtoo/en/terms.html
+Account deletion   https://jasper8350.github.io/howtoo/en/account-deletion.html
+Open source        https://jasper8350.github.io/howtoo/en/oss-licenses.html
+
 지원 이메일        lsj8350@gmail.com

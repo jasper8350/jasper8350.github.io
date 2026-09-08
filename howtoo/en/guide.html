@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guide — Howtoo</title>
+<meta name="description" content="Howtoo guide: getting started, credit card payment dates, holiday rules, spreadsheet sync, backup, and alerts." />
+<meta property="og:title" content="Guide — Howtoo" />
+<meta property="og:description" content="Howtoo guide: getting started, card payment dates, spreadsheet sync, backup." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="./">Howtoo</a>
+  <nav>
+    <a href="./guide.html" aria-current="page">Guide</a>
+    <a href="./privacy.html">Privacy</a>
+    <a href="./terms.html">Terms</a>
+    <a href="./account-deletion.html">Delete account</a>
+    <a class="lang" href="../">한국어</a>
+  </nav>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <span class="kicker">Guide</span>
+    <h1>Five minutes to settle in</h1>
+    <p class="sub">From the first launch to setting up your card payment date, in order.</p>
+  </div>
+
+  <section class="block">
+    <h2>Getting started</h2>
+    <p class="lead">No sign-in required. Install it and start.</p>
+    <ol class="steps">
+      <li>
+        <h3>Open the app and tap “Start with these”</h3>
+        <p>Every field is pre-filled with a reasonable value. Changing your take-home salary and monthly fixed costs is enough to begin. Everything else can be adjusted later in Settings.</p>
+      </li>
+      <li>
+        <h3>Check the accounts that were created</h3>
+        <p>The Assets tab already contains cash, a main bank account, a debit card and a credit card. Rename them and set your balances. Long-press to delete any you do not need.</p>
+      </li>
+      <li>
+        <h3>Enter your first transaction</h3>
+        <p>Tap the “+” button at the bottom right of the Ledger tab. Amount, category and account are all you need. Star an entry you use often and it becomes a one-tap entry next time.</p>
+      </li>
+      <li>
+        <h3>Paste a card approval SMS</h3>
+        <p>Paste the message from your card issuer into the paste field on the entry screen and the amount, merchant and date are filled in for you. The app never asks for permission to read your messages — you copy and paste it yourself.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Setting up a credit card payment date</h2>
+    <p class="lead">This is the heart of Howtoo. Set it once and the payment date and amount are calculated for you from then on.</p>
+    <ol class="steps">
+      <li>
+        <h3>Tap the card in the Assets tab</h3>
+        <p>When the account group is “Card”, fields for the payment date and billing period appear.</p>
+      </li>
+      <li>
+        <h3>Enter the payment date</h3>
+        <p>Use the date printed on your statement. For the 14th of each month, enter <b>14</b>.</p>
+      </li>
+      <li>
+        <h3>Enter the day the billing period starts</h3>
+        <p>Read the billing period from your statement and enter the day it starts.</p>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Billing period on the statement</th><th>Value to enter</th></tr></thead>
+            <tbody>
+              <tr><td>1st to the last day of the previous month</td><td>1</td></tr>
+              <tr><td>13th of last month to the 12th of this month</td><td>13</td></tr>
+              <tr><td>16th of last month to the 15th of this month</td><td>16</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>As you type, the app shows “this month’s billing period ○○ – ○○ · debited ○○” right below. Check it against your statement.</p>
+      </li>
+      <li>
+        <h3>Choose the payment account</h3>
+        <p>Pick the account the card bill is debited from. Setting this is what lets the app warn you when that account will be short on the payment date.</p>
+      </li>
+    </ol>
+    <div class="note">
+      <b>If the payment date is a weekend or holiday</b>
+      It is calculated as the next business day. That is the default for card payments, and you can change it per card.
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Fixed costs and holiday rules</h2>
+    <p class="lead">Money leaves in different ways depending on the item. You can express that difference directly.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Setting</th><th>When to choose it</th></tr></thead>
+        <tbody>
+          <tr><td><b>Same day</b></td><td>Direct debits such as insurance premiums and phone bills that leave the account on the day, weekend or not. (default)</td></tr>
+          <tr><td><b>Next business day</b></td><td>Card bills and some bank transfers. On a holiday they slide forward.</td></tr>
+          <tr><td><b>Previous business day</b></td><td>Items such as salary that arrive early when the date is a holiday.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px">
+      Register these under Ledger &gt; Fixed costs. As you enter one, “this month’s debit date ○○” appears immediately,
+      and if a holiday pushes it into the following month, the app says “moves to next month”.
+    </p>
+  </section>
+
+  <section class="block">
+    <h2>Turning on alerts</h2>
+    <ol class="steps">
+      <li>
+        <h3>Settings &gt; Low balance alert for payment dates</h3>
+        <p>Turning the switch on asks for notification permission. Allow it and you are notified at <b>9 a.m. the day before</b> the day you would run short.</p>
+      </li>
+      <li>
+        <h3>What you receive</h3>
+        <p>“On 26 October, 600,000 won leaves your main account. You are 100,000 won short.” Billing-period cutoffs are included too.</p>
+      </li>
+    </ol>
+    <div class="note">
+      <b>Alerts are built on the device too</b>
+      No amounts are sent to a server. The calculation and the scheduling both happen on your phone.
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Using a spreadsheet on a PC (optional)</h2>
+    <p class="lead">Keep a spreadsheet in Google Drive and sync it with the app in both directions.</p>
+    <ol class="steps">
+      <li>
+        <h3>Settings &gt; Spreadsheet ledger</h3>
+        <p>Connect a Google account and create or pick a file. The app can only reach the file it created — it does not see the rest of your Drive.</p>
+      </li>
+      <li>
+        <h3>Install Google Drive for desktop on your PC</h3>
+        <p>Open the same file in Excel, edit it and save. Wait for the Drive upload to finish, then sync in the app.</p>
+      </li>
+      <li>
+        <h3>Formulas work</h3>
+        <p>SUM, SUMIFS, IF and similar formulas in the amount column or a summary sheet are evaluated by the app. Formatting and charts are preserved.</p>
+      </li>
+    </ol>
+    <div class="warn">
+      <b>Do not edit on the PC and in the app at the same time</b>
+      Saving an Excel file that has been open for a long time can make the Drive client overwrite a newer version. Open the current file, edit, save and close. If something goes wrong, Google Drive’s version history can restore it.
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Backup and moving to a new device</h2>
+    <ol class="steps">
+      <li>
+        <h3>Settings &gt; Export JSON</h3>
+        <p>Transactions, accounts, investments, journal entries and photos are saved into one file. Always export before changing devices.</p>
+      </li>
+      <li>
+        <h3>Import on the new device</h3>
+        <p>Settings &gt; Import JSON restores everything. Spreadsheet connection details are deliberately excluded from the backup for security, so reconnect on the new device.</p>
+      </li>
+    </ol>
+    <div class="warn">
+      <b>Uninstalling the app deletes your data</b>
+      Everything is stored on the device, so back up before you uninstall. There is no copy on our server.
+    </div>
+  </section>
+
+  <section class="block faq">
+    <h2>If you get stuck</h2>
+    <details>
+      <summary>Lunar New Year 2027 isn’t marked as a holiday</summary>
+      <p>Dates that move each year, such as Lunar New Year and Chuseok, need to be fetched. Use Settings &gt; Holidays &gt; Update public holidays, or add the date yourself on the same screen.</p>
+    </details>
+    <details>
+      <summary>The projected payment doesn’t match my statement</summary>
+      <p>The app only adds up the transactions you entered — it does not pull them from your card issuer. Check for missing entries first, then check that the billing period start day matches your statement.</p>
+    </details>
+    <details>
+      <summary>I’m not getting alerts</summary>
+      <p>Check that the switch is on in Settings and that notifications are allowed for Howtoo in your device settings. No alert is sent if the shortfall date has already passed or the balance is sufficient.</p>
+    </details>
+    <details>
+      <summary>I want to delete my account</summary>
+      <p>See <a href="./account-deletion.html">Account and data deletion</a>. If you only use the app, there is no account to delete — uninstalling removes your data with it.</p>
+    </details>
+  </section>
+
+</main>
+
+<footer class="site">
+  <p>Questions? Write to <a href="mailto:lsj8350@gmail.com">lsj8350@gmail.com</a>.</p>
+  <p><a href="./">Overview</a> · <a href="./privacy.html">Privacy Policy</a> · <a href="./terms.html">Terms of Service</a> · <a href="./account-deletion.html">Account and data deletion</a></p>
+  <p class="fine">This app is not an investment advisory service. The calculations and summaries it provides are reference material to support your own judgement.</p>
+</footer>
+
+</body>
+</html>
