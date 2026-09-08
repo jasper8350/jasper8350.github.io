@@ -4,4 +4,4 @@
 이용약관           https://jasper8350.github.io/howtoo/terms.html
 계정·데이터 삭제    https://jasper8350.github.io/howtoo/account-deletion.html
 오픈소스 라이선스   https://jasper8350.github.io/howtoo/oss-licenses.html
-지원 이메일        support@howtoo.app
+지원 이메일        lsj8350@gmail.com
