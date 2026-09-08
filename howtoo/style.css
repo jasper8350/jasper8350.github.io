@@ -79,6 +79,22 @@ header.site nav a.lang {
 }
 header.site nav a.lang:hover { border-color: var(--teal); }
 
+/* 좁은 화면에서 메뉴가 세 줄로 늘어지면 첫 화면이 그만큼 밀린다. 한 줄로 두고 옆으로 넘긴다. */
+@media (max-width: 700px) {
+  header.site { padding: 10px 16px; gap: 10px; }
+  header.site nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 14px;
+    margin-left: 0;
+    width: 100%;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  header.site nav::-webkit-scrollbar { display: none; }
+  .hero { padding: 24px 0 20px; }
+}
+
 /* ---------- 뼈대 ---------- */
 main.page, main.doc {
   max-width: 1080px;
