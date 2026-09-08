@@ -8,12 +8,13 @@
 <meta property="og:title" content="Guide — Howtoo" />
 <meta property="og:description" content="Howtoo guide: getting started, card payment dates, spreadsheet sync, backup." />
 <meta property="og:type" content="website" />
+<link rel="icon" href="../img/icon-256.png" />
 <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
 <header class="site">
-  <a class="brand" href="./">Howtoo</a>
+  <a class="brand" href="./"><img src="../img/icon-256.png" alt="" width="28" height="28" />Howtoo</a>
   <nav>
     <a href="./guide.html" aria-current="page">Guide</a>
     <a href="./privacy.html">Privacy</a>
@@ -170,6 +171,68 @@
     </div>
   </section>
 
+  <section class="block">
+    <h2>Writing a spending journal</h2>
+    <p class="lead">A number alone tells you nothing next month. One line is enough.</p>
+    <ol class="steps">
+      <li><h3>Right from the expense entry</h3><p>Tap “📝 write a line about this” at the bottom of the entry screen and the journal opens with the date, amount and merchant already filled in.</p></li>
+      <li><h3>Mood and photos too</h3><p>Pick 🙂 😐 🙁 and attach a photo. Photos are kept in the app&#39;s own folder and never sent to a server.</p></li>
+      <li><h3>Your streak</h3><p>The home screen shows how many days in a row you have written. Missing one day does not reset it to zero.</p></li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Period log (optional)</h2>
+    <p class="lead">See what you craved and what you spent at each point in the cycle. It does not appear unless you turn it on.</p>
+    <ol class="steps">
+      <li><h3>Settings &gt; Period log</h3><p>Turn the switch on and it appears in the home shortcuts and in Settings.</p></li>
+      <li><h3>Record a start date once</h3><p>Tap “start today”, or tap a date in the calendar. From the second record on, your average cycle length appears.</p></li>
+      <li><h3>Mood, symptoms, cravings</h3><p>Tap any date to log how you felt and what you wanted to eat. Once these build up, the per-phase statistics appear.</p></li>
+    </ol>
+    <div class="warn">
+      <b>Not a medical device</b>
+      Ovulation and fertile windows are estimates from the average of your past records. They vary between people and between months, so they must not be used for contraception or pregnancy planning. See a doctor if something feels wrong.
+    </div>
+    <div class="note">
+      <b>These records never leave the device</b>
+      Nothing is sent to our server, to Google Drive, to a shared ledger, or to any AI service. The cycle maths and the spending comparison all happen on your phone.
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Setting a lock</h2>
+    <ol class="steps">
+      <li><h3>Settings &gt; Lock &gt; Create PIN</h3><p>Choose 4 to 8 digits. Creating one locks the journal straight away.</p></li>
+      <li><h3>Choose what it covers</h3><p>Turn it on separately for the journal and for the period log. Five wrong attempts start a wait, and the wait doubles with each further mistake.</p></li>
+    </ol>
+    <div class="warn">
+      <b>Forget the PIN and it cannot be opened</b>
+      The lock blocks access to the screen; it does not encrypt the data file on the device. If you forget it, the only option is to erase those records from Settings.
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Making it yours</h2>
+    <ol class="steps">
+      <li><h3>Settings &gt; Change user type</h3><p>Choose from schoolchild, middle and high school, university, first job, newlywed, parent of young children, parent of school-age children, midlife, and retired. Categories and budgets are laid out to match and unused screens are hidden.</p><p>Categories you already use and everything you have recorded are left alone — only missing categories are added.</p></li>
+      <li><h3>Settings &gt; Theme</h3><p>Brightness follows your device, or stays light or dark; the accent is green, blue, plum or sand. Left on the device setting, it darkens by itself at night.</p></li>
+      <li><h3>Settings &gt; Guide</h3><p>Replay the in-app guide at any time, or switch it off entirely.</p></li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Separate ledgers, one combined view</h2>
+    <p class="lead">When each partner runs their own pension and ISA accounts, only combining the assets shows the whole picture.</p>
+    <ol class="steps">
+      <li><h3>Settings &gt; Ledgers</h3><p>Create a ledger per purpose. Invite the other person to a shared one with an invite code. A personal ledger stays invisible to them unless you share it.</p></li>
+      <li><h3>Settings &gt; Combined view</h3><p>Pick the ledgers to combine and see net worth — account balances plus holdings — along with income and spending for the period, on one screen.</p><p>Pension and retirement accounts are counted separately because you cannot draw on them now. Cards and loans are subtracted as money you owe.</p></li>
+    </ol>
+    <div class="note">
+      <b>The combined view is read-only</b>
+      You do not enter anything here, because the app cannot decide which ledger an entry belongs to. Enter it in the ledger it belongs to.
+    </div>
+  </section>
+
   <section class="block faq">
     <h2>If you get stuck</h2>
     <details>
@@ -183,6 +246,14 @@
     <details>
       <summary>I’m not getting alerts</summary>
       <p>Check that the switch is on in Settings and that notifications are allowed for Howtoo in your device settings. No alert is sent if the shortfall date has already passed or the balance is sufficient.</p>
+    </details>
+    <details>
+      <summary>I want to delete my period records</summary>
+      <p>Delete individual entries from the calendar, or erase all of them at once under Settings &gt; Period log. Uninstalling the app removes them too.</p>
+    </details>
+    <details>
+      <summary>I changed the theme but only part of it changed</summary>
+      <p>Leave the screen and come back and it applies everywhere. If you left it on the device setting, it follows your device&#39;s dark mode automatically.</p>
     </details>
     <details>
       <summary>I want to delete my account</summary>

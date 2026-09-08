@@ -3,22 +3,27 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Howtoo — Salary budgeting and investment tracking</title>
-<meta name="description" content="A budgeting app that knows a payment date falling on a holiday moves. Salary allocation, holdings, and tax-saving limits in one app. Your data stays on your device." />
-<meta property="og:title" content="Howtoo — Salary budgeting and investment tracking" />
-<meta property="og:description" content="A budgeting app that works out when the money actually leaves your account." />
+<title>Howtoo — A budget app that reads the calendar</title>
+<meta name="description" content="A budgeting app that works out when money actually leaves your account when a payment date lands on a holiday. Spending journal, period tracking, calculator, investing and tax limits in one app. Your records stay on your device." />
+<meta property="og:title" content="Howtoo — A budget app that reads the calendar" />
+<meta property="og:description" content="If the payment date is a holiday, Howtoo works out when the money actually leaves. Spending journal, period tracking and a calculator too." />
+<meta property="og:image" content="https://jasper8350.github.io/howtoo/img/og.jpg" />
+<meta property="og:url" content="https://jasper8350.github.io/howtoo/en/" />
 <meta property="og:type" content="website" />
+<link rel="icon" href="../img/icon-256.png" />
+<link rel="apple-touch-icon" href="../img/icon-256.png" />
 <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
 <header class="site">
-  <a class="brand" href="./">Howtoo</a>
+  <a class="brand" href="./"><img src="../img/icon-256.png" alt="" width="28" height="28" />Howtoo</a>
   <nav>
+    <a href="#diff">Difference</a>
+    <a href="#screens">Screens</a>
+    <a href="#features">Features</a>
     <a href="./guide.html">Guide</a>
     <a href="./privacy.html">Privacy</a>
-    <a href="./terms.html">Terms</a>
-    <a href="./account-deletion.html">Delete account</a>
     <a class="lang" href="../">한국어</a>
   </nav>
 </header>
@@ -26,92 +31,112 @@
 <main class="page">
 
   <div class="hero">
-    <span class="kicker">household + invest</span>
-    <h1>A budget app should read a calendar</h1>
-    <p class="sub">
-      When a credit card payment date falls on a weekend or a public holiday, the money actually
-      leaves on the next business day. Howtoo works that out and tells you before it happens.
-    </p>
-    <div class="badges">
-      <a class="badge soon" href="#" aria-disabled="true">Google Play — coming soon</a>
-      <a class="badge soon" href="#" aria-disabled="true">App Store — coming soon</a>
-      <a class="badge" href="./guide.html">Read the guide</a>
+    <div>
+      <span class="kicker">everyday budgeting + investing</span>
+      <h1>A budget app should<br>read a calendar</h1>
+      <p class="sub">
+        When a card payment date falls on a weekend or a public holiday, the money actually leaves on
+        the next business day. Howtoo works that out and tells you first. And it does not only talk about
+        money — it keeps the reason next to the number.
+      </p>
+      <div class="badges">
+        <a class="badge soon" href="#" aria-disabled="true">Google Play — coming soon</a>
+        <a class="badge soon" href="#" aria-disabled="true">App Store — coming soon</a>
+        <a class="badge ghost" href="./guide.html">Read the guide</a>
+      </div>
+      <ul class="chips" aria-label="What is inside">
+        <li>Ledger</li><li>Spending journal</li><li>Period log</li><li>Calculator</li><li>Investing</li><li>Tax</li><li>Statistics</li>
+      </ul>
     </div>
+    <div class="phone"><img src="../img/shot-dashboard.webp" width="440" height="957" alt="Home screen — emergency fund status, today&#39;s spending, savings progress" /></div>
   </div>
 
-  <section class="block">
-    <h2>What other budget apps leave to you</h2>
-    <p class="lead">When money actually moves depends on the calendar. That is where Howtoo starts.</p>
+  <section aria-label="Screenshots" id="screens">
+    <div class="strip">
+      <figure><img src="../img/shot-dashboard.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>Home</figcaption></figure>
+      <figure><img src="../img/shot-budget.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>Ledger calendar</figcaption></figure>
+      <figure><img src="../img/shot-stats.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>Statistics</figcaption></figure>
+      <figure><img src="../img/shot-journal.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>Spending journal</figcaption></figure>
+      <figure><img src="../img/shot-cycle.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>Period log</figcaption></figure>
+      <figure><img src="../img/shot-accounts.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>Accounts and cards</figcaption></figure>
+      <figure><img src="../img/shot-report.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>Report</figcaption></figure>
+      <figure><img src="../img/shot-calculator.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>Calculator</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="block" id="diff">
+    <h2>What makes it different</h2>
+    <p class="lead">Plenty of apps record what you spent. Howtoo works out <b>when the money actually moves</b>, and keeps <b>the reason</b> beside the number.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>The situation</th><th>A typical budget app</th><th>Howtoo</th></tr></thead>
+        <tbody>
+          <tr><td>Card payment date falls on a Sunday</td><td class="no">Shows it on that day</td><td class="yes">Calculates and shows the next business day</td></tr>
+          <tr><td>Insurance direct debit falls on a Saturday</td><td class="no">Treated the same as a card</td><td class="yes">Leaves that day — the rule is set per item</td></tr>
+          <tr><td>An end-of-month payment slides into next month</td><td class="no">Disappears from this month&#39;s budget</td><td class="yes">Tells you it moved to next month</td></tr>
+          <tr><td>The account will be short on the payment date</td><td class="no">You find out on the day</td><td class="yes">Alerts you the morning before</td></tr>
+          <tr><td>You cannot remember why you spent it</td><td class="no">Only a number remains</td><td class="yes">Write a spending journal straight from the entry</td></tr>
+          <tr><td>You always spend more at a certain time of the month</td><td class="no">No way to see it</td><td class="yes">Compares spending and cravings by cycle phase</td></tr>
+          <tr><td>You need to split an amount</td><td class="no">Open a separate calculator</td><td class="yes">Type <code>12000+3500*2</code> straight into the amount field</td></tr>
+          <tr><td>A couple each run their own pension accounts</td><td class="no">Mix them into one ledger, or give up</td><td class="yes">Keep separate ledgers and view the combined total</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block" id="features">
+    <h2>Start with when the money moves</h2>
+    <p class="lead">Only a ledger that reads the calendar can tell you what is really left next week.</p>
     <div class="grid">
-      <div class="card">
-        <span class="tag">Holidays</span>
-        <h3>When the payment date is a holiday</h3>
-        <p>A credit card bill slides to the next business day; an insurance direct debit goes out that same day regardless. You set the behaviour per item.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Month rollover</span>
-        <h3>Next month’s expense, not this month’s</h3>
-        <p>An end-of-month payment pushed to the 1st lands outside that month’s budget. Howtoo flags it when it happens.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Shortfall alert</span>
-        <h3>If the balance won’t cover it</h3>
-        <p>Howtoo walks your payment account forward date by date and warns you the morning before the day it runs short.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Billing cycle</span>
-        <h3>Spend today, billed when?</h3>
-        <p>Enter the billing period your card issuer uses, and get a heads-up as the cutoff approaches.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Spendable</span>
-        <h3>Balance is not what you can spend</h3>
-        <p>Subtract the fixed costs still to come, add the salary still to arrive, and see the real figure on the home screen.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Investing</span>
-        <h3>Budget and portfolio together</h3>
-        <p>Holdings and unrealised gains, asset-class weights, recurring contributions, and pension/IRP tax-deduction limits in one place.</p>
-      </div>
+      <div class="card tint-teal"><div class="icon">📅</div><span class="tag">Holidays</span><h3>When the payment date is a holiday</h3><p>A card bill slides to the next business day; an insurance debit goes out that same day. You set the behaviour per item.</p></div>
+      <div class="card tint-blue"><div class="icon">↪️</div><span class="tag">Rollover</span><h3>Next month&#39;s expense, not this month&#39;s</h3><p>An end-of-month payment pushed to the 1st lands outside that month&#39;s budget. Howtoo points it out.</p></div>
+      <div class="card tint-peach"><div class="icon">⚠️</div><span class="tag">Shortfall</span><h3>Warned the morning before</h3><p>Howtoo walks your payment account forward date by date and warns you before the day it runs short.</p></div>
+      <div class="card tint-purple"><div class="icon">💳</div><span class="tag">Billing cycle</span><h3>Spend today, billed when?</h3><p>Enter the billing period your issuer uses and get a heads-up before the cutoff. Spending targets are tracked too.</p></div>
+      <div class="card tint-yellow"><div class="icon">💰</div><span class="tag">Spendable</span><h3>Balance is not what you can spend</h3><p>Subtract the fixed costs still to come, add the salary still to arrive, and see the real figure on the home screen.</p></div>
+      <div class="card tint-pink"><div class="icon">🔁</div><span class="tag">Repeats</span><h3>Never type the same thing twice</h3><p>Weekly, every N weeks, monthly, every N months, yearly — and pick the weekdays too.</p></div>
     </div>
   </section>
 
   <section class="block">
-    <h2>Set-up that doesn’t wear you out</h2>
-    <p class="lead">Sensible values are filled in the first time you open the app. Change what differs and start.</p>
+    <h2>The reason, beside the number</h2>
+    <p class="lead">Budgeting apps get abandoned because only numbers remain. Knowing why is what changes next month.</p>
     <div class="grid">
-      <div class="card">
-        <h3>17 categories ready</h3>
-        <p>Food, housing, transport, phone, salary, bonus and more are already there. Rename and recolour them freely.</p>
-      </div>
-      <div class="card">
-        <h3>4 accounts ready</h3>
-        <p>Cash, a main bank account, a debit card and a credit card — with the credit card already linked to its payment account.</p>
-      </div>
-      <div class="card">
-        <h3>A starting budget</h3>
-        <p>Income minus what you plan to invest is split across categories at standard ratios, so you have a budget on day one.</p>
-      </div>
+      <div class="card tint-teal"><div class="icon">📝</div><span class="tag">Spending journal</span><h3>One line, right from the entry</h3><p>Tap “write a line about this” while entering an expense and the journal opens with the date and amount filled in. Mood and photos too, and it counts your streak.</p></div>
+      <div class="card tint-pink"><div class="icon">🌸</div><span class="tag">Period log</span><h3>Including what you craved</h3><p>Log your cycle and see average daily spending and cravings by phase. Not a medical device, and <b>the records never leave your device.</b> A PIN lock is available.</p></div>
+      <div class="card tint-blue"><div class="icon">🧮</div><span class="tag">Calculator</span><h3>Basic and scientific, with history</h3><p>A calculator lives inside the app. Up to 100 results are kept, and amount fields accept expressions directly.</p></div>
+      <div class="card tint-purple"><div class="icon">🙂</div><span class="tag">Restraint</span><h3>Tag late-night food and delivery</h3><p>Tag the spending you want to cut and see what you could have saved. It states facts; it does not scold.</p></div>
+      <div class="card tint-yellow"><div class="icon">👤</div><span class="tag">Tailored</span><h3>From a schoolchild to a retiree</h3><p>Pick who is using it and the categories, budget and visible screens change. No pension screens for a student; medical costs come first for a retiree.</p></div>
+      <div class="card tint-peach"><div class="icon">🎨</div><span class="tag">Themes</span><h3>Dark at night, on its own</h3><p>Brightness follows your device setting, and you pick the accent from green, blue, plum or sand.</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Budget and portfolio together</h2>
+    <div class="grid">
+      <div class="card tint-teal"><div class="icon">📈</div><h3>Holdings and asset weights</h3><p>See unrealised gains and weights; recurring contributions are calculated on their real debit date, holidays included.</p></div>
+      <div class="card tint-blue"><div class="icon">🧾</div><h3>Pension and IRP deduction limits</h3><p>See how much more you can contribute — money you get back at year-end settlement.</p></div>
+      <div class="card tint-purple"><div class="icon">👫</div><h3>Separate ledgers, combined view</h3><p>Each partner keeps their own ledger while the assets and flows are viewed together. Pension and retirement accounts are counted separately because you cannot spend them now.</p></div>
     </div>
   </section>
 
   <section class="block">
     <h2>Your money stays on your phone</h2>
-    <p class="lead">A ledger shows everything about your finances. That is why on-device storage is the default.</p>
+    <p class="lead">A ledger reveals everything about your finances. That is why on-device storage is the default.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Data</th><th>Where it is stored</th></tr></thead>
         <tbody>
           <tr><td>Transactions, balances, holdings</td><td>On your device only (never sent to our server)</td></tr>
-          <tr><td>Journal entries and photos</td><td>On your device only</td></tr>
-          <tr><td>If you turn on spreadsheet sync</td><td>A spreadsheet in your own Google Drive (it does not pass through our server)</td></tr>
-          <tr><td>If you request an AI report</td><td>Aggregated figures only — monthly totals and ratios, never individual transactions or merchant names</td></tr>
+          <tr><td>Spending journal entries and photos</td><td>On your device only</td></tr>
+          <tr><td>Period records</td><td>On your device only — not to Drive, not to a shared ledger</td></tr>
+          <tr><td>If you turn on spreadsheet sync</td><td>A spreadsheet in your own Google Drive (never through our server)</td></tr>
+          <tr><td>If you request an AI report</td><td>Aggregated figures only — never individual transactions or merchant names</td></tr>
         </tbody>
       </table>
     </div>
     <div class="note">
-      <b>No internet required</b>
-      Recording, calculating and notifications all happen on the device. You can use the app without signing in.
+      <b>No internet and no sign-in required</b>
+      Recording, calculation and alerts all happen on the device. Signing in is needed only for Google Drive backup and for connecting a shared ledger.
     </div>
   </section>
 
@@ -119,55 +144,32 @@
     <h2>Pricing</h2>
     <p class="lead">Everything works for free. You pay only to remove ads or to use AI more often.</p>
     <div class="grid">
-      <div class="card">
-        <h3>Free</h3>
-        <p>Budgeting, accounts, investments, tax limits, spreadsheet sync and alerts — all of it. A banner ad sits at the bottom, and AI reports are limited to 5 per month.</p>
-      </div>
-      <div class="card">
-        <h3>Ad-free · Plus</h3>
-        <p>The banner ad disappears and the AI report allowance goes up.</p>
-      </div>
-      <div class="card">
-        <h3>Lifetime</h3>
-        <p>Pay once, stay ad-free. Unlimited AI is not included.</p>
-      </div>
+      <div class="card"><h3>Free</h3><p>Ledger, accounts, investing, tax, journal, period log, calculator, spreadsheet sync and alerts — all of it. A banner ad sits at the bottom and AI reports are limited to 5 per month.</p></div>
+      <div class="card"><h3>Ad-free · Plus</h3><p>The banner disappears and the AI report allowance goes up.</p></div>
+      <div class="card"><h3>Lifetime</h3><p>Pay once, stay ad-free. Unlimited AI is not included.</p></div>
     </div>
     <div class="note">
       <b>No ads covering the screen</b>
-      A budget app gets opened many times a day for a few seconds. We do not interrupt that with full-screen ads — only a banner at the bottom.
+      A budget app is opened many times a day for a few seconds. We keep a banner at the bottom and never interrupt with a full-screen ad.
     </div>
   </section>
 
   <section class="block faq">
     <h2>Common questions</h2>
-    <details>
-      <summary>Does it import transactions from my bank?</summary>
-      <p>No. Howtoo does not connect to bank or card-issuer accounts. There is nowhere in the app to store an account number, a card number, or brokerage credentials. It can, however, read a card approval SMS you paste in and fill the amount and merchant for you.</p>
-    </details>
-    <details>
-      <summary>What happens to my data if I change phones?</summary>
-      <p>Export a JSON file from Settings and import it on the new device. If you turn on Google Drive spreadsheet sync, transactions and account names are matched between devices automatically.</p>
-    </details>
-    <details>
-      <summary>Can I use it on a PC?</summary>
-      <p>Turn on Drive sync and a spreadsheet appears in your own Google Drive. Open it in Excel, edit and save, and the app picks up the changes. Formulas in the amount column are evaluated by the app too.</p>
-    </details>
-    <details>
-      <summary>Does it recommend what to invest in?</summary>
-      <p>No. Howtoo is not an investment advisory service and never tells you to buy or sell anything. It calculates allocations and limits from figures you enter, as a reference for your own decisions.</p>
-    </details>
-    <details>
-      <summary>How does it know the public holidays?</summary>
-      <p>Weekends, fixed-date holidays and substitute holidays are computed by rule. Dates that move each year, such as Lunar New Year and Chuseok, are fetched from the Korean public data service or entered by you in Settings.</p>
-    </details>
+    <details><summary>Does it import transactions from my bank?</summary><p>No. Howtoo does not connect to bank or card-issuer accounts, and there is nowhere in the app to store an account number, a card number or brokerage credentials. It can read a card approval SMS you paste in and fill the amount and merchant for you.</p></details>
+    <details><summary>Is the period tracking accurate?</summary><p>It is an estimate based on the average of your past records. Cycles vary between people and between months, so it must not be relied upon for contraception or pregnancy planning. These records are stored on your device only and are never sent to our server or to Google Drive.</p></details>
+    <details><summary>What happens to my data if I change phones?</summary><p>Export a JSON file from Settings and import it on the new device. With Google Drive sync on, transactions and account names are matched between devices automatically.</p></details>
+    <details><summary>Can I use it on a PC?</summary><p>Turn on Drive sync and a spreadsheet appears in your own Google Drive. Open it in Excel, edit, save, and the app picks up the changes — formulas included.</p></details>
+    <details><summary>Does it recommend what to invest in?</summary><p>No. Howtoo is not an investment advisory service and never tells you to buy or sell. It calculates allocations and limits from figures you enter, as a reference for your own decisions.</p></details>
+    <details><summary>How does it know the public holidays?</summary><p>Weekends, fixed-date holidays and substitute holidays are computed by rule. Dates that move each year, such as Lunar New Year and Chuseok, are fetched from the Korean public data service or entered by you in Settings.</p></details>
   </section>
 
 </main>
 
 <footer class="site">
   <p>Howtoo · <a href="mailto:lsj8350@gmail.com">lsj8350@gmail.com</a></p>
-  <p><a href="./privacy.html">Privacy Policy</a> · <a href="./terms.html">Terms of Service</a> · <a href="./account-deletion.html">Account and data deletion</a></p>
-  <p class="fine">This app is not an investment advisory service. The calculations and summaries it provides are reference material to support your own judgement.</p>
+  <p><a href="./guide.html">Guide</a> · <a href="./privacy.html">Privacy Policy</a> · <a href="./terms.html">Terms of Service</a> · <a href="./account-deletion.html">Account and data deletion</a> · <a href="./oss-licenses.html">Open source</a></p>
+  <p class="fine">This app is not an investment advisory service; its calculations and summaries are reference material for your own judgement. The period tracking feature is not a medical device and must not be used as a basis for diagnosis or contraception.</p>
 </footer>
 
 </body>

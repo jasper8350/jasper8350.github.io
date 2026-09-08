@@ -3,22 +3,27 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>하우투 — 월급 배분 가계부 · 투자관리</title>
-<meta name="description" content="카드 결제일이 휴일이면 언제 빠져나가는지까지 계산하는 가계부. 월급 배분, 투자 보유 현황, 절세 계산을 한 앱에서. 데이터는 기기에 저장됩니다." />
-<meta property="og:title" content="하우투 — 월급 배분 가계부 · 투자관리" />
-<meta property="og:description" content="카드 결제일이 휴일이면 언제 빠져나가는지까지 계산하는 가계부." />
+<title>하우투 — 생활 밀착형 가계부 · 투자관리</title>
+<meta name="description" content="카드 결제일이 휴일이면 언제 빠져나가는지까지 계산하는 가계부. 소비 일기, 생리 기록, 계산기, 투자·절세까지 한 앱에서. 기록은 기기에 저장됩니다." />
+<meta property="og:title" content="하우투 — 생활 밀착형 가계부 · 투자관리" />
+<meta property="og:description" content="결제일이 빨간날이면 언제 빠져나가는지까지 계산합니다. 소비 일기·생리 기록·계산기까지 한 앱에." />
+<meta property="og:image" content="https://jasper8350.github.io/howtoo/img/og.jpg" />
+<meta property="og:url" content="https://jasper8350.github.io/howtoo/" />
 <meta property="og:type" content="website" />
+<link rel="icon" href="./img/icon-256.png" />
+<link rel="apple-touch-icon" href="./img/icon-256.png" />
 <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
 <header class="site">
-  <a class="brand" href="./">하우투</a>
+  <a class="brand" href="./"><img src="./img/icon-256.png" alt="" width="28" height="28" />하우투</a>
   <nav>
+    <a href="#diff">차이점</a>
+    <a href="#screens">화면</a>
+    <a href="#features">기능</a>
     <a href="./guide.html">사용 안내</a>
     <a href="./privacy.html">개인정보</a>
-    <a href="./terms.html">이용약관</a>
-    <a href="./account-deletion.html">계정 삭제</a>
     <a class="lang" href="./en/">English</a>
   </nav>
 </header>
@@ -26,71 +31,194 @@
 <main class="page">
 
   <div class="hero">
-    <span class="kicker">household + invest</span>
-    <h1>가계부가 달력을 볼 줄 알아야죠</h1>
-    <p class="sub">
-      카드 결제일이 주말·공휴일에 걸리면 실제로는 다음 영업일에 빠져나갑니다.
-      하우투는 그걸 계산해서 미리 알려줍니다.
-    </p>
-    <div class="badges">
-      <a class="badge soon" href="#" aria-disabled="true">Google Play — 준비 중</a>
-      <a class="badge soon" href="#" aria-disabled="true">App Store — 준비 중</a>
-      <a class="badge" href="./guide.html">사용 안내 보기</a>
+    <div>
+      <span class="kicker">생활 밀착형 가계부 + 투자관리</span>
+      <h1>가계부가 달력을<br>볼 줄 알아야죠</h1>
+      <p class="sub">
+        카드 결제일이 주말·공휴일에 걸리면 실제로는 다음 영업일에 빠져나갑니다.
+        하우투는 그걸 계산해서 미리 알려줍니다. 그리고 돈 이야기만 하지 않습니다 —
+        그날 왜 그렇게 썼는지, 몸이 어땠는지까지 같이 남깁니다.
+      </p>
+      <div class="badges">
+        <a class="badge soon" href="#" aria-disabled="true">Google Play — 준비 중</a>
+        <a class="badge soon" href="#" aria-disabled="true">App Store — 준비 중</a>
+        <a class="badge ghost" href="./guide.html">사용 안내 보기</a>
+      </div>
+      <ul class="chips" aria-label="들어 있는 기능">
+        <li>가계부</li><li>소비 일기</li><li>생리 기록</li><li>계산기</li><li>투자</li><li>절세</li><li>통계</li>
+      </ul>
     </div>
+    <div class="phone"><img src="./img/shot-dashboard.webp" width="440" height="957" alt="홈 화면 — 비상금 상태, 오늘 지출, 모으기 진행률" /></div>
   </div>
 
-  <section class="block">
-    <h2>다른 가계부가 안 해주는 것</h2>
-    <p class="lead">돈이 실제로 언제 빠져나가는지는 달력에 달려 있습니다. 하우투는 거기서 시작합니다.</p>
+  <section aria-label="화면 미리보기" id="screens">
+    <div class="strip">
+      <figure><img src="./img/shot-dashboard.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>홈</figcaption></figure>
+      <figure><img src="./img/shot-budget.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>가계부 달력</figcaption></figure>
+      <figure><img src="./img/shot-stats.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>통계</figcaption></figure>
+      <figure><img src="./img/shot-journal.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>소비 일기</figcaption></figure>
+      <figure><img src="./img/shot-cycle.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>생리 기록</figcaption></figure>
+      <figure><img src="./img/shot-accounts.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>자산·카드</figcaption></figure>
+      <figure><img src="./img/shot-report.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>리포트</figcaption></figure>
+      <figure><img src="./img/shot-calculator.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>계산기</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="block" id="diff">
+    <h2>다른 가계부와 무엇이 다른가</h2>
+    <p class="lead">기록하는 앱은 많습니다. 하우투는 <b>돈이 실제로 언제 빠져나가는지</b>를 계산하고, 숫자 옆에 <b>그날의 사정</b>을 같이 둡니다.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>이런 상황</th><th>보통의 가계부</th><th>하우투</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>카드 결제일이 일요일</td>
+            <td class="no">그날로 표시</td>
+            <td class="yes">다음 영업일로 계산해서 표시</td>
+          </tr>
+          <tr>
+            <td>보험료 자동이체가 토요일</td>
+            <td class="no">카드와 똑같이 처리</td>
+            <td class="yes">그날 그대로 — 항목마다 규칙을 다르게 둡니다</td>
+          </tr>
+          <tr>
+            <td>말일 결제가 다음 달로 밀림</td>
+            <td class="no">이번 달 예산에서 사라짐</td>
+            <td class="yes">‘다음 달로 넘어감’이라고 알려줍니다</td>
+          </tr>
+          <tr>
+            <td>결제일에 잔액이 모자랄 것 같음</td>
+            <td class="no">당일에 알게 됨</td>
+            <td class="yes">하루 전 아침에 알림</td>
+          </tr>
+          <tr>
+            <td>왜 그렇게 썼는지 기억 안 남</td>
+            <td class="no">숫자만 남음</td>
+            <td class="yes">지출 화면에서 바로 소비 일기를 씁니다</td>
+          </tr>
+          <tr>
+            <td>그 시기만 되면 유독 많이 씀</td>
+            <td class="no">알 방법이 없음</td>
+            <td class="yes">생리 주기 단계별로 지출·식욕을 견줘 봅니다</td>
+          </tr>
+          <tr>
+            <td>금액을 나눠 넣어야 함</td>
+            <td class="no">계산기 앱을 따로 열기</td>
+            <td class="yes">금액 칸에 <code>12000+3500*2</code> 를 그대로 입력</td>
+          </tr>
+          <tr>
+            <td>부부가 각자 IRP·ISA를 굴림</td>
+            <td class="no">한 장부에 섞거나 포기</td>
+            <td class="yes">각자 장부를 그대로 두고 합산해서 전체만 같이 봅니다</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block" id="features">
+    <h2>돈이 언제 움직이는지부터</h2>
+    <p class="lead">달력을 읽는 가계부라야 다음 주에 얼마가 남는지 정확해집니다.</p>
     <div class="grid">
-      <div class="card">
+      <div class="card tint-teal">
+        <div class="icon">📅</div>
         <span class="tag">휴일 계산</span>
         <h3>결제일이 빨간날이면</h3>
-        <p>신용카드 대금은 다음 영업일로 밀리고, 보험료 같은 자동이체는 그날 그대로 빠집니다. 항목마다 다르게 설정할 수 있습니다.</p>
+        <p>신용카드 대금은 다음 영업일로 밀리고, 보험료 같은 자동이체는 그날 그대로 빠집니다. 항목마다 다르게 설정합니다.</p>
       </div>
-      <div class="card">
-        <span class="tag">달 넘김 감지</span>
+      <div class="card tint-blue">
+        <div class="icon">↪️</div>
+        <span class="tag">달 넘김</span>
         <h3>이번 달이 아니라 다음 달 지출</h3>
-        <p>말일 결제가 휴일이라 다음 달 1일로 밀리면 그 달 예산에 안 잡힙니다. 하우투는 이 경우를 표시해 줍니다.</p>
+        <p>말일 결제가 휴일이라 1일로 밀리면 그 달 예산에 안 잡힙니다. 하우투는 이 경우를 짚어 줍니다.</p>
       </div>
-      <div class="card">
+      <div class="card tint-peach">
+        <div class="icon">⚠️</div>
         <span class="tag">잔액 경고</span>
-        <h3>결제일에 모자랄 것 같으면</h3>
+        <h3>모자랄 것 같으면 하루 전에</h3>
         <p>결제 계좌 잔액에서 나갈 돈을 날짜순으로 빼 보고, 모자라는 날 하루 전 아침에 알려줍니다.</p>
       </div>
-      <div class="card">
+      <div class="card tint-purple">
+        <div class="icon">💳</div>
         <span class="tag">이용기간</span>
         <h3>오늘 쓰면 언제 청구되나</h3>
-        <p>카드사·결제일마다 다른 이용기간을 직접 설정하고, 마감이 다가오면 알려줍니다.</p>
+        <p>카드사·결제일마다 다른 이용기간을 직접 설정하고, 마감이 다가오면 알려줍니다. 실적 채우기도 같이 봅니다.</p>
       </div>
-      <div class="card">
+      <div class="card tint-yellow">
+        <div class="icon">💰</div>
         <span class="tag">쓸 수 있는 돈</span>
         <h3>통장 잔액 ≠ 쓸 수 있는 돈</h3>
-        <p>남은 고정지출을 빼고, 들어올 급여를 더한 실제 여윳돈을 홈에서 바로 봅니다.</p>
+        <p>남은 고정지출을 빼고 들어올 급여를 더한 실제 여윳돈을 홈에서 바로 봅니다.</p>
       </div>
-      <div class="card">
-        <span class="tag">투자</span>
-        <h3>가계부와 투자를 한곳에</h3>
-        <p>보유 종목 평가손익·자산군 비중, 적립식 자동이체, 연금·IRP 세액공제 한도까지 같이 관리합니다.</p>
+      <div class="card tint-pink">
+        <div class="icon">🔁</div>
+        <span class="tag">반복</span>
+        <h3>같은 건 다시 안 적습니다</h3>
+        <p>매주·몇 주마다·매달·몇 개월마다·매년, 요일까지 골라 반복 등록합니다.</p>
       </div>
     </div>
   </section>
 
   <section class="block">
-    <h2>설정하다 지치지 않게</h2>
-    <p class="lead">처음 켜면 일반적인 값이 이미 채워져 있습니다. 다른 것만 고치고 바로 쓰세요.</p>
+    <h2>숫자 옆에 그날의 사정</h2>
+    <p class="lead">가계부가 오래 못 가는 이유는 숫자만 남기 때문입니다. 왜 그랬는지가 있어야 다음 달이 달라집니다.</p>
     <div class="grid">
-      <div class="card">
-        <h3>기본 분류 17종</h3>
-        <p>식비·주거·교통·통신부터 급여·상여까지 미리 들어 있습니다. 이름과 색은 바꿀 수 있습니다.</p>
+      <div class="card tint-teal">
+        <div class="icon">📝</div>
+        <span class="tag">소비 일기</span>
+        <h3>지출 화면에서 바로 한 줄</h3>
+        <p>지출을 적다가 ‘이 지출로 한 줄 쓰기’를 누르면 날짜·금액이 채워진 채로 일기가 열립니다. 기분과 사진도 함께 남습니다. 연속 기록 일수도 셉니다.</p>
       </div>
-      <div class="card">
-        <h3>기본 자산 4개</h3>
-        <p>현금·주거래 통장·체크카드·신용카드가 만들어져 있고, 신용카드는 결제 계좌까지 이어져 있습니다.</p>
+      <div class="card tint-pink">
+        <div class="icon">🌸</div>
+        <span class="tag">생리 기록</span>
+        <h3>그 시기에 뭐가 당겼는지까지</h3>
+        <p>주기를 기록하면 단계별로 하루 평균 지출과 당긴 음식을 견줘 줍니다. 의료기기가 아닌 참고용이며, <b>기록은 기기 밖으로 나가지 않습니다.</b> PIN 잠금도 걸 수 있습니다.</p>
       </div>
-      <div class="card">
-        <h3>표준 예산</h3>
-        <p>수입에서 투자할 돈을 뺀 금액을 표준 비율로 나눠 카테고리 예산을 잡아 둡니다.</p>
+      <div class="card tint-blue">
+        <div class="icon">🧮</div>
+        <span class="tag">계산기</span>
+        <h3>일반 + 공학용, 기록까지</h3>
+        <p>앱 안에 계산기가 따로 있습니다. = 를 누른 계산은 최대 100개까지 남고, 금액 칸에서도 계산식을 그대로 씁니다.</p>
+      </div>
+      <div class="card tint-purple">
+        <div class="icon">🙂</div>
+        <span class="tag">절제</span>
+        <h3>야식·배달에 태그를 달면</h3>
+        <p>줄이고 싶은 지출에 태그를 붙이면 얼마를 아낄 수 있었는지 모아 보여 줍니다. 나무라지 않고 사실만 말합니다.</p>
+      </div>
+      <div class="card tint-yellow">
+        <div class="icon">👤</div>
+        <span class="tag">맞춤</span>
+        <h3>초등학생부터 은퇴한 분까지</h3>
+        <p>쓰는 사람 유형을 고르면 분류·예산·보이는 화면이 달라집니다. 학생에게 IRP를 보여 주지 않고, 은퇴하신 분께는 의료비를 앞에 둡니다.</p>
+      </div>
+      <div class="card tint-peach">
+        <div class="icon">🎨</div>
+        <span class="tag">테마</span>
+        <h3>밤에는 저절로 어둡게</h3>
+        <p>기기 설정을 따라 밝기가 바뀌고, 강조색은 초록·파랑·자두·모래 중에 고릅니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>가계부와 투자를 한곳에</h2>
+    <div class="grid">
+      <div class="card tint-teal">
+        <div class="icon">📈</div>
+        <h3>보유 종목과 자산군 비중</h3>
+        <p>평가손익과 비중을 보고, 적립식 자동이체도 휴일을 반영해 실제 출금일로 계산합니다.</p>
+      </div>
+      <div class="card tint-blue">
+        <div class="icon">🧾</div>
+        <h3>연금·IRP 세액공제 한도</h3>
+        <p>얼마를 더 넣을 수 있는지 계산해 보여 줍니다. 연말정산에서 돌려받는 돈입니다.</p>
+      </div>
+      <div class="card tint-purple">
+        <div class="icon">👫</div>
+        <h3>각자 쓰고, 합쳐서 보고</h3>
+        <p>부부·연인이 각자 장부를 그대로 굴리면서 자산과 흐름만 합쳐 봅니다. 연금·IRP·퇴직연금은 지금 못 쓰는 돈이라 따로 셉니다.</p>
       </div>
     </div>
   </section>
@@ -103,15 +231,16 @@
         <thead><tr><th>데이터</th><th>어디에 저장되나</th></tr></thead>
         <tbody>
           <tr><td>거래 내역 · 계좌 잔액 · 보유 종목</td><td>기기 안에만 (서버로 보내지 않음)</td></tr>
-          <tr><td>일지 글 · 사진</td><td>기기 안에만</td></tr>
+          <tr><td>소비 일기 글 · 사진</td><td>기기 안에만</td></tr>
+          <tr><td>생리 기록</td><td>기기 안에만 — 드라이브에도, 함께 쓰는 장부에도 올리지 않음</td></tr>
           <tr><td>엑셀 동기화를 켠 경우</td><td>본인 Google Drive의 엑셀 파일 (운영자 서버를 거치지 않음)</td></tr>
           <tr><td>AI 리포트를 누른 경우</td><td>월 합계·비율 같은 요약값만 전송 (개별 거래·상호명 제외)</td></tr>
         </tbody>
       </table>
     </div>
     <div class="note">
-      <b>인터넷이 없어도 됩니다</b>
-      기록·계산·알림 모두 기기에서 처리합니다. 로그인 없이 바로 쓸 수 있습니다.
+      <b>인터넷이 없어도, 로그인이 없어도 됩니다</b>
+      기록·계산·알림 모두 기기에서 처리합니다. 로그인은 구글 드라이브 백업과 함께 쓰는 장부를 연결할 때만 필요합니다.
     </div>
   </section>
 
@@ -121,7 +250,7 @@
     <div class="grid">
       <div class="card">
         <h3>무료</h3>
-        <p>가계부·자산·투자·절세·엑셀 동기화·알림까지 전부. 화면 아래 배너 광고가 있고, AI 리포트는 월 5회입니다.</p>
+        <p>가계부·자산·투자·절세·일기·생리 기록·계산기·엑셀 동기화·알림까지 전부. 화면 아래 배너 광고가 있고, AI 리포트는 월 5회입니다.</p>
       </div>
       <div class="card">
         <h3>광고 제거 · Plus</h3>
@@ -134,7 +263,7 @@
     </div>
     <div class="note">
       <b>화면을 덮는 광고는 없습니다</b>
-      가계부는 하루에도 여러 번 짧게 쓰는 앱입니다. 전면 광고로 흐름을 끊지 않고, 화면 아래 배너만 둡니다.
+      가계부는 하루에도 여러 번 짧게 쓰는 앱입니다. 흐름을 끊지 않도록 화면 아래 배너만 둡니다.
     </div>
   </section>
 
@@ -143,6 +272,10 @@
     <details>
       <summary>계좌를 연결하면 자동으로 입력되나요?</summary>
       <p>아니요. 은행·카드사 계정을 연결하지 않습니다. 계좌번호·카드번호·증권사 로그인 정보는 저장할 자리 자체가 없습니다. 카드 승인 문자를 붙여넣으면 금액·상호를 알아서 채워 주는 기능은 있습니다.</p>
+    </details>
+    <details>
+      <summary>생리 기록은 정확한가요?</summary>
+      <p>지난 기록의 평균으로 낸 추정입니다. 사람마다 달마다 달라지므로 피임이나 임신 계획의 근거로 쓸 수 없습니다. 이 기록은 기기 안에만 저장되고 서버·구글 드라이브 어디로도 전송하지 않습니다.</p>
     </details>
     <details>
       <summary>기기를 바꾸면 데이터는요?</summary>
@@ -166,8 +299,8 @@
 
 <footer class="site">
   <p>하우투 · 문의 <a href="mailto:lsj8350@gmail.com">lsj8350@gmail.com</a></p>
-  <p><a href="./privacy.html">개인정보처리방침</a> · <a href="./terms.html">이용약관</a> · <a href="./account-deletion.html">계정·데이터 삭제</a></p>
-  <p class="fine">본 앱은 투자자문이 아니며, 제공되는 계산과 요약은 개인 판단을 돕기 위한 참고 자료입니다.</p>
+  <p><a href="./guide.html">사용 안내</a> · <a href="./privacy.html">개인정보처리방침</a> · <a href="./terms.html">이용약관</a> · <a href="./account-deletion.html">계정·데이터 삭제</a> · <a href="./oss-licenses.html">오픈소스</a></p>
+  <p class="fine">본 앱은 투자자문이 아니며, 제공되는 계산과 요약은 개인 판단을 돕기 위한 참고 자료입니다. 생리 기록 기능은 의료기기가 아니며 진단·피임의 근거로 사용할 수 없습니다.</p>
 </footer>
 
 </body>
