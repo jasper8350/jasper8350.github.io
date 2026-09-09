@@ -5,6 +5,7 @@ BrewMate 공개 주소 — 스토어 등록정보와 심사 양식에 그대로 
 이용약관                   https://jasper8350.github.io/brewmate/terms.html
 계정·데이터 삭제            https://jasper8350.github.io/brewmate/account-deletion.html
 오픈소스 라이선스           https://jasper8350.github.io/brewmate/oss-licenses.html
+레시피 공유 받는 페이지     https://jasper8350.github.io/brewmate/r/#<code>   (앱 "공유" 단추가 만든다)
 지원(문의) URL             https://jasper8350.github.io/brewmate/#support
 app-ads.txt               https://jasper8350.github.io/app-ads.txt   (개발자 사이트 루트, 이미 있음)
 

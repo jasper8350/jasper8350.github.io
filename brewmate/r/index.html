@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>받은 레시피 — BrewMate</title>
+<meta name="description" content="BrewMate 에서 공유한 핸드드립 레시피. 앱에서 열면 내 레시피로 저장됩니다." />
+<meta property="og:title" content="BrewMate 레시피" />
+<meta property="og:description" content="단계별 물량과 시간이 담긴 핸드드립 레시피입니다. BrewMate 앱에서 열면 내 레시피로 저장됩니다." />
+<meta property="og:image" content="https://jasper8350.github.io/brewmate/img/og.jpg" />
+<meta property="og:type" content="website" />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="../img/icon-256.png" />
+<link rel="stylesheet" href="../style.css" />
+<style>
+  /* 이 페이지만의 것: 레시피 카드와 QR */
+  .recipe { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+  .recipe h1 { font-size: clamp(24px, 4vw, 34px); margin: 0 0 4px; }
+  .recipe .meta { color: var(--muted); margin: 0 0 16px; }
+  .ratio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; background: var(--brew-dark); color: #fff; border-radius: 14px; padding: 16px 18px; margin: 0 0 18px; }
+  .ratio b { display: block; font-size: 26px; }
+  .ratio span { font-size: 13px; opacity: .8; }
+  .qr { display: grid; place-items: center; gap: 8px; margin-top: 22px; padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+  .qr canvas, .qr img { border-radius: 8px; background: #fff; padding: 8px; }
+  .qr p { margin: 0; font-size: 13px; color: var(--muted); text-align: center; }
+  .code { font-family: ui-monospace, monospace; font-size: 12px; word-break: break-all; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="../"><img src="../img/icon-256.png" alt="" width="28" height="28" />BrewMate</a>
+  <nav><a href="../">소개</a><a href="../privacy.html">개인정보</a></nav>
+</header>
+<main class="page">
+  <div id="app" class="block"></div>
+</main>
+<footer class="site">
+  <p>BrewMate · 문의 <a href="mailto:lsj8350@gmail.com">lsj8350@gmail.com</a></p>
+  <p class="fine">레시피는 이 주소 안에 들어 있고 서버에는 저장되지 않습니다. 링크를 아는 사람만 볼 수 있습니다.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+(function () {
+  var DRIPPER = { 'cone': '원뿔형 드리퍼', 'flat-wave': '평저 웨이브 드리퍼', 'immersion-valve': '밸브형 침지 드리퍼', 'lidded-cone': '뚜껑형 원뿔 드리퍼' };
+  var VALVE = { open: '밸브 열림', closed: '밸브 닫힘', none: '' };
+  var app = document.getElementById('app');
+  var code = location.hash.replace(/^#/, '');
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function fmt(sec) { var m = Math.floor(sec / 60), s = sec % 60; return m + ':' + (s < 10 ? '0' : '') + s; }
+  function decode(c) {
+    try {
+      var b64 = c.replace(/-/g, '+').replace(/_/g, '/');
+      while (b64.length % 4) b64 += '=';
+      var bin = atob(b64), bytes = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      var p = JSON.parse(new TextDecoder().decode(bytes));
+      if (p.v !== 1 || typeof p.n !== 'string' || !DRIPPER[p.d] || !Array.isArray(p.s) || !p.s.length) return null;
+      return p;
+    } catch (e) { return null; }
+  }
+
+  function fail(msg) {
+    app.innerHTML = '<div class="recipe"><h1>레시피를 읽을 수 없습니다</h1><p class="meta">' + esc(msg) + '</p><p><a class="badge ghost" href="../">BrewMate 소개 보기</a></p></div>';
+  }
+
+  if (!code) return fail('주소 뒤에 레시피 코드가 없습니다. 앱의 "공유" 단추로 만든 링크를 열어주세요.');
+  var p = decode(code);
+  if (!p) return fail('링크가 잘렸거나 형식이 맞지 않습니다. 보낸 사람에게 다시 요청해주세요.');
+
+  var total = 0, clock = 0, rows = '';
+  p.s.forEach(function (st, i) {
+    var desc = st[0] || (st[2] + 'g 푸어'), dur = st[1], pour = st[2], valve = VALVE[st[3]] || '';
+    var start = clock; clock += dur; total = Math.round((total + pour) * 10) / 10;
+    rows += '<tr><td>' + (i + 1) + '</td><td>' + esc(desc) + (valve ? ' <small>(' + valve + ')</small>' : '') + '</td><td>' + fmt(start) + '–' + fmt(clock) + '</td><td>' + pour + 'g</td><td>' + total + 'g</td></tr>';
+  });
+  var ratio = p.c > 0 ? (total / p.c).toFixed(2) : '—';
+  var deep = 'brewmate://recipe/import?d=' + encodeURIComponent(code);
+
+  app.innerHTML =
+    '<div class="recipe">' +
+      '<h1>' + esc(p.n) + '</h1>' +
+      '<p class="meta">' + DRIPPER[p.d] + ' · ' + esc(p.g || '중간') + ' 분쇄 (목표 ' + esc(p.m) + '㎛) · ' + esc(p.t) + '℃</p>' +
+      '<div class="ratio"><div><b>' + esc(p.c) + 'g</b><span>원두</span></div><div><b>' + total + 'g</b><span>총 물량</span></div><div><b>1:' + ratio + '</b><span>비율</span></div></div>' +
+      '<div class="badges"><a class="badge" href="' + deep + '">BrewMate 앱에서 열기</a><a class="badge ghost" href="../#devices">앱 받기</a></div>' +
+      '<p class="meta">앱이 설치되어 있으면 위 단추로 바로 내 레시피에 저장됩니다. 없으면 아래 표를 보고 따라 해도 됩니다.</p>' +
+      '<div class="tablewrap"><table><thead><tr><th>#</th><th>단계</th><th>시간</th><th>붓는 물</th><th>누적</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
+    '</div>' +
+    '<div class="qr"><div id="qr"></div><p>친구 폰 카메라로 이 QR 을 찍으면 같은 페이지가 열립니다.</p></div>';
+
+  try {
+    new QRCode(document.getElementById('qr'), { text: location.href, width: 220, height: 220, correctLevel: QRCode.CorrectLevel.L });
+  } catch (e) {
+    document.querySelector('.qr p').textContent = 'QR 을 그리지 못했습니다. 주소를 복사해 보내주세요: ' + location.href;
+  }
+})();
+</script>
+</body>
+</html>
