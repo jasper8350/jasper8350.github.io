@@ -14,4 +14,4 @@ Terms of Service   https://jasper8350.github.io/howtoo/en/terms.html
 Account deletion   https://jasper8350.github.io/howtoo/en/account-deletion.html
 Open source        https://jasper8350.github.io/howtoo/en/oss-licenses.html
 
-지원 이메일        lsj8350@gmail.com
+지원 이메일        kidcatlab@gmail.com
