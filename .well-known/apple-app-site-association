@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["REPLACE_WITH_TEAMID.REPLACE_WITH_BUNDLE_ID"],
+        "components": [
+          { "/": "/brewmate/r/*", "comment": "BrewMate 레시피 공유 링크" }
+        ]
+      }
+    ]
+  }
+}
