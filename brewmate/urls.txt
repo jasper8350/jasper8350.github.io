@@ -1,0 +1,14 @@
+BrewMate 공개 주소 — 스토어 등록정보와 심사 양식에 그대로 붙여 넣는다
+
+소개 페이지 (마케팅 URL)   https://jasper8350.github.io/brewmate/
+개인정보처리방침           https://jasper8350.github.io/brewmate/privacy.html
+이용약관                   https://jasper8350.github.io/brewmate/terms.html
+계정·데이터 삭제            https://jasper8350.github.io/brewmate/account-deletion.html
+오픈소스 라이선스           https://jasper8350.github.io/brewmate/oss-licenses.html
+지원(문의) URL             https://jasper8350.github.io/brewmate/#support
+app-ads.txt               https://jasper8350.github.io/app-ads.txt   (개발자 사이트 루트, 이미 있음)
+
+지원 이메일                lsj8350@gmail.com
+
+앱 안에서 여는 문서는 Vercel 배포 웹(apps/web)의 /privacy, /terms 이며 내용이 같다.
+Vercel 도메인이 정해지기 전까지 스토어 양식에는 위 GitHub Pages 주소를 쓴다.

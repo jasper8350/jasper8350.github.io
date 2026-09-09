@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BrewMate — 핸드드립 브루잉 타이머 · 분쇄도 측정</title>
+<meta name="description" content="레시피마다 정해진 시각·물량·밸브 상태를 순서대로 알려주는 핸드드립 타이머. 원두량을 바꾸면 물량이 같이 바뀌고, 100원 동전 하나로 분쇄도를 근사 측정합니다. 로그인 없이 전부 사용." />
+<meta property="og:title" content="BrewMate — 핸드드립 브루잉 타이머 · 분쇄도 측정" />
+<meta property="og:description" content="다음에 얼마나 부어야 하는지, 5초 전에 알려주는 타이머. 분쇄도는 100원 동전 하나로 숫자로." />
+<meta property="og:image" content="https://jasper8350.github.io/brewmate/img/og.jpg" />
+<meta property="og:url" content="https://jasper8350.github.io/brewmate/" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="./img/icon-256.png" />
+<link rel="apple-touch-icon" href="./img/icon-256.png" />
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="./"><img src="./img/icon-256.png" alt="" width="28" height="28" />BrewMate</a>
+  <nav>
+    <a href="#diff">차이점</a>
+    <a href="#screens">화면</a>
+    <a href="#features">타이머</a>
+    <a href="#grind">분쇄도</a>
+    <a href="#recipes">레시피</a>
+    <a href="#devices">기기</a>
+    <a href="#faq">FAQ</a>
+    <a href="./privacy.html">개인정보</a>
+  </nav>
+</header>
+
+<main class="page">
+
+  <div class="hero">
+    <div>
+      <span class="kicker">핸드드립 브루잉 타이머 + 분쇄도 측정</span>
+      <h1>물은 언제,<br>얼마나 부어야 하나</h1>
+      <p class="sub">
+        레시피마다 정해진 시각·붓는 양·누적 양·밸브 상태를 순서대로 보여 주고, 다음 단계 5초 전에
+        미리 알려줍니다. 원두량을 바꾸면 물량이 같은 비율로 따라오고, 분쇄도는 100원 동전 하나로
+        감이 아니라 숫자로 봅니다.
+      </p>
+      <div class="badges">
+        <a class="badge soon" href="#" aria-disabled="true">Google Play — 준비 중</a>
+        <a class="badge soon" href="#" aria-disabled="true">App Store — 준비 중</a>
+        <a class="badge ghost" href="#diff">무엇이 다른지 보기</a>
+      </div>
+      <ul class="chips" aria-label="들어 있는 기능">
+        <li>레시피 14종</li><li>단계형 타이머</li><li>물량 자동 계산</li><li>5초 전 알림</li><li>분쇄도 측정</li><li>추출 기록</li><li>폰 · 태블릿</li>
+      </ul>
+    </div>
+    <div class="phone"><img src="./img/shot-timer.webp" width="440" height="978" alt="타이머 화면 — 경과 시간, 현재 단계 50g 블루밍, 밸브 없음, 92°C, 다음 단계 23초 전" /></div>
+  </div>
+
+  <section aria-label="화면 미리보기" id="screens">
+    <div class="strip">
+      <figure><img src="./img/shot-catalog.webp" width="440" height="978" alt="" loading="lazy" /><figcaption>레시피 목록</figcaption></figure>
+      <figure><img src="./img/shot-recipe.webp" width="440" height="978" alt="" loading="lazy" /><figcaption>비율과 원두량 조정</figcaption></figure>
+      <figure><img src="./img/shot-steps.webp" width="440" height="978" alt="" loading="lazy" /><figcaption>추출 단계</figcaption></figure>
+      <figure><img src="./img/shot-timer-ready.webp" width="440" height="978" alt="" loading="lazy" /><figcaption>타이머 준비</figcaption></figure>
+      <figure><img src="./img/shot-timer.webp" width="440" height="978" alt="" loading="lazy" /><figcaption>추출 중</figcaption></figure>
+      <figure><img src="./img/shot-settings.webp" width="440" height="978" alt="" loading="lazy" /><figcaption>설정</figcaption></figure>
+      <figure><img src="./img/shot-alerts.webp" width="440" height="978" alt="" loading="lazy" /><figcaption>알림음 · 진동 · 광고</figcaption></figure>
+      <figure><img src="./img/shot-signin.webp" width="440" height="978" alt="" loading="lazy" /><figcaption>로그인(선택)</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="block" id="diff">
+    <h2>다른 타이머와 무엇이 다른가</h2>
+    <p class="lead">스톱워치는 시간만 셉니다. BrewMate 는 <b>지금 얼마나 붓고 있어야 하는지</b>를 알고 있고, 원두량이 바뀌면 <b>물량을 다시 계산</b>합니다.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>이런 상황</th><th>보통의 타이머</th><th>BrewMate</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>다음에 얼마나 부어야 하지</td>
+            <td class="no">레시피를 따로 외우거나 봐야 함</td>
+            <td class="yes">단계마다 붓는 양 · 누적 양 · 밸브 상태를 순서대로</td>
+          </tr>
+          <tr>
+            <td>원두를 20g 대신 15g 씀</td>
+            <td class="no">단계별 물량을 손으로 다시 계산</td>
+            <td class="yes">총 물량과 단계별 물량을 같은 비율로 자동 계산</td>
+          </tr>
+          <tr>
+            <td>단계가 바뀌는 순간</td>
+            <td class="no">화면을 계속 보고 있어야 함</td>
+            <td class="yes">5초 전 예고 + 전환 시점을 알림음·진동으로</td>
+          </tr>
+          <tr>
+            <td>주전자 잡느라 앱을 잠깐 벗어남</td>
+            <td class="no">시간이 밀리거나 멈춤</td>
+            <td class="yes">시작 시각 기준으로 다시 계산해 한 번도 밀리지 않음</td>
+          </tr>
+          <tr>
+            <td>추출 중 화면</td>
+            <td class="no">꺼져서 다시 켬</td>
+            <td class="yes">추출 중에는 꺼지지 않음</td>
+          </tr>
+          <tr>
+            <td>분쇄도가 레시피에 맞는지</td>
+            <td class="no">감으로</td>
+            <td class="yes">100원 동전과 찍으면 D50 · 편차 · 권장 범위 대비</td>
+          </tr>
+          <tr>
+            <td>지난주에 잘 나온 그 추출</td>
+            <td class="no">기억에 의존</td>
+            <td class="yes">원두량 · 물량 · 평점 · 메모를 기록, 원하면 기기끼리 동기화</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block" id="features">
+    <h2>단계를 읽어 주는 타이머</h2>
+    <p class="lead">레시피를 외우지 않아도 됩니다. 타이머가 지금 단계와 다음 단계를 말해 줍니다.</p>
+    <div class="grid">
+      <div class="card tint-brew">
+        <div class="icon">⏱️</div>
+        <span class="tag">단계형 타이머</span>
+        <h3>블루밍 50g → 푸어 70g → …</h3>
+        <p>레시피의 각 단계가 시작 시각 · 붓는 양 · 누적 양 · 밸브 열림/닫힘 · 물 온도와 함께 순서대로 나옵니다. 현재 단계는 크게, 전체 타임라인은 아래에.</p>
+      </div>
+      <div class="card tint-caramel">
+        <div class="icon">⚖️</div>
+        <span class="tag">물량 자동 계산</span>
+        <h3>원두량만 바꾸면 끝</h3>
+        <p>1:15 같은 비율을 그대로 두고 총 물량과 단계별 물량만 비례해서 다시 계산합니다. 시간과 온도는 바꾸지 않습니다.</p>
+      </div>
+      <div class="card tint-cream">
+        <div class="icon">🔔</div>
+        <span class="tag">5초 전 알림</span>
+        <h3>다음 단계 5초 전에 미리</h3>
+        <p>전환 5초 전과 전환 시점에 알림 · 알림음 · 진동으로 알려줍니다. 알림음 크기와 진동 세기는 각각 3단계, 끄는 것도 따로.</p>
+      </div>
+      <div class="card tint-milk">
+        <div class="icon">🕰️</div>
+        <span class="tag">밀리지 않는 시간</span>
+        <h3>앱을 벗어나도 그대로</h3>
+        <p>초를 세는 게 아니라 시작 시각을 기준으로 경과 시간을 다시 계산합니다. 전화가 와도, 잠깐 다른 앱을 봐도 시간이 어긋나지 않습니다.</p>
+      </div>
+      <div class="card tint-sky">
+        <div class="icon">🔆</div>
+        <span class="tag">화면 꺼짐 방지</span>
+        <h3>추출 중에는 켜져 있음</h3>
+        <p>주전자를 든 손으로 화면을 다시 켤 일이 없습니다. 추출이 끝나면 원래 설정으로 돌아갑니다.</p>
+      </div>
+      <div class="card tint-leaf">
+        <div class="icon">🎚️</div>
+        <span class="tag">밸브 · 온도</span>
+        <h3>밸브형 침지, 온도 단계까지</h3>
+        <p>밸브를 닫고 담갔다가 여는 레시피, 단계마다 물 온도를 바꾸는 레시피도 단계에 밸브 상태와 온도가 같이 표시됩니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="grind">
+    <h2>분쇄도, 감 대신 숫자로</h2>
+    <p class="lead">그라인더 눈금은 기계마다 다릅니다. 100원 동전을 자로 삼아 입자 크기를 재고 레시피의 권장 범위와 견줍니다.</p>
+    <div class="grid">
+      <div class="card tint-caramel">
+        <div class="icon">🪙</div>
+        <span class="tag">100원 동전이 자</span>
+        <h3>지름 24mm 를 기준으로</h3>
+        <p>가루를 얇게 펼치고 100원 동전을 같이 찍으면, 동전 크기로 사진의 축척을 잡아 입자 크기를 µm 로 추정합니다. 다른 도구가 필요 없습니다.</p>
+      </div>
+      <div class="card tint-brew">
+        <div class="icon">📊</div>
+        <span class="tag">결과</span>
+        <h3>D50 · 표준편차 · 히스토그램</h3>
+        <p>입자 절반이 그보다 작은 크기(D50), 고르기(표준편차), 오차 추정치, 표본 수, 분포 그래프를 보여 줍니다.</p>
+      </div>
+      <div class="card tint-leaf">
+        <div class="icon">🎯</div>
+        <span class="tag">레시피 대비</span>
+        <h3>"권장 600–900µm 안에 있음"</h3>
+        <p>레시피마다 권장 범위와 목표값이 있습니다. 측정 결과가 굵은지 가는지 바로 판정해 줍니다.</p>
+      </div>
+      <div class="card tint-milk">
+        <div class="icon">🗑️</div>
+        <span class="tag">사진은 저장하지 않음</span>
+        <h3>분석하고 바로 폐기</h3>
+        <p>촬영한 사진은 분석 서버에서 처리한 즉시 버립니다. 기록에는 결과 숫자만 남습니다.</p>
+      </div>
+    </div>
+    <div class="note">
+      <b>참고용 근사치입니다</b>
+      스마트폰 카메라로 계산한 값이라 전문 입도 분석 장비를 대체하지 않습니다. 어두운 무광 배경에서 그림자 없이, 가루가 서로 닿지 않게 펼치고, 카메라를 수직으로 두면 오차가 줄어듭니다.
+    </div>
+  </section>
+
+  <section class="block" id="recipes">
+    <h2>레시피 14종, 드리퍼는 형상으로</h2>
+    <p class="lead">원두량 · 물량 · 시간 · 온도 수치를 정리한 자료입니다. 특정 인물이나 대회, 장비 제조사 이름은 쓰지 않고 드리퍼는 형상으로만 구분합니다.</p>
+    <div class="grid">
+      <div class="card tint-brew">
+        <div class="icon">🔻</div>
+        <h3>원뿔형 · 7종</h3>
+        <p>4:6 분할 추출 · 린싱 후 4회 푸어 · 25초 간격 펄스 푸어 · 15초 간격 10회 푸어 · 6-7-7-5-5 분할 푸어 · 온도 블렌드 단일 푸어 · 이중 분쇄도 4회 푸어</p>
+      </div>
+      <div class="card tint-caramel">
+        <div class="icon">🔒</div>
+        <h3>밸브형 침지 · 4종</h3>
+        <p>하이브리드 밸브 전환 · 3단 온도 밸브 전환 · 3단 온도 침지 전환 · 리버스 아이스 침지</p>
+      </div>
+      <div class="card tint-cream">
+        <div class="icon">〰️</div>
+        <h3>평저 웨이브 · 2종</h3>
+        <p>웨이브 3회 푸어 · 웨이브 기본 2종 비율</p>
+      </div>
+      <div class="card tint-milk">
+        <div class="icon">🫖</div>
+        <h3>뚜껑형 · 1종</h3>
+        <p>뚜껑 아로마 보존 추출</p>
+      </div>
+    </div>
+    <div class="note">
+      <b>수치가 부족한 레시피는 타이머 없이 보여 줍니다</b>
+      원본 정보가 모자라거나 서로 모순되는 레시피는 비율과 메모만 두고 타이머를 잠급니다. 원두 상태 · 장비 · 물에 따라 값은 직접 조정하세요.
+    </div>
+  </section>
+
+  <section class="block" id="privacy">
+    <h2>기록은 기기에, 동기화는 선택</h2>
+    <p class="lead">로그인하지 않아도 레시피 · 타이머 · 분쇄도 측정 · 기록을 전부 씁니다. 로그인은 기록을 기기끼리 맞출 때만 필요합니다.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>데이터</th><th>어디에 있나</th></tr></thead>
+        <tbody>
+          <tr><td>추출 기록 · 분쇄도 기록</td><td>기기 안. 설정에서 "계정에 기록 동기화"를 켠 경우에만 서버에도 저장</td></tr>
+          <tr><td>로그인 정보</td><td>이메일 주소만 — Google · Apple · 카카오 · 네이버 로그인에서도 이름 · 프로필 사진은 받지 않음</td></tr>
+          <tr><td>분쇄도 측정 사진</td><td>분석 직후 폐기, 어디에도 저장하지 않음</td></tr>
+          <tr><td>광고</td><td>Google AdMob, 비개인 맞춤 광고를 기본으로 하고 동의를 받은 뒤에만 요청</td></tr>
+          <tr><td>위치 · 연락처 · 사진첩</td><td>수집하지 않음</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <b>계정 삭제는 앱 안에서 바로</b>
+      설정 → 계정 → 계정 삭제. 계정에 동기화된 기록도 함께 즉시 지워집니다. 기기 안 기록만 지우는 단추도 따로 있습니다. 자세한 내용은 <a href="./privacy.html">개인정보처리방침</a>.
+    </div>
+  </section>
+
+  <section class="block" id="pricing">
+    <h2>요금</h2>
+    <p class="lead">무료로 다 쓸 수 있습니다. 광고를 없애고 싶을 때만 고르면 됩니다.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>무료</h3>
+        <p>레시피 · 타이머 · 분쇄도 측정 · 기록 · 동기화까지 전부. 화면 아래 배너 하나와, 앱을 켤 때 열 번에 한 번 나오는 앱 열기 광고가 있습니다.</p>
+      </div>
+      <div class="card">
+        <h3>광고 보고 24시간 없애기</h3>
+        <p>설정에서 광고 한 편을 끝까지 보면 24시간 동안 광고가 사라집니다. 더 보면 뒤에 이어 붙습니다. Android · iOS 모두.</p>
+      </div>
+      <div class="card">
+        <h3>광고 제거 (iPhone · iPad)</h3>
+        <p>1개월 · 6개월 · 1년 구독 또는 평생 한 번 결제. App Store 결제이며 같은 Apple 계정의 다른 기기에서 "구매 복원"으로 다시 씁니다. Android 에는 유료 상품이 없습니다.</p>
+      </div>
+    </div>
+    <div class="note">
+      <b>추출 중에는 어떤 전체 화면 광고도 없습니다</b>
+      타이머가 돌아가는 동안, 화면을 옮기는 동안, 카메라를 켠 동안에는 배너 말고는 아무것도 나오지 않습니다. 물 붓는 타이밍을 광고가 가로채면 안 되니까요.
+    </div>
+  </section>
+
+  <section class="block" id="devices">
+    <h2>폰에서도, 태블릿에서도</h2>
+    <p class="lead">세로 · 가로 모두 지원하고, 넓은 화면에서는 레시피를 두 열로 놓습니다. 기기를 바꿔도 로그인하면 기록이 따라옵니다.</p>
+    <div class="grid">
+      <div class="card tint-leaf"><div class="icon">🤖</div><h3>Android 폰 · 태블릿</h3><p>Google Play 출시를 준비하고 있습니다. Android 7.0 이상.</p></div>
+      <div class="card tint-sky"><div class="icon">📱</div><h3>iPhone · iPad</h3><p>App Store 출시를 준비하고 있습니다. 아이패드는 가로 · 세로 모두 지원.</p></div>
+      <div class="card tint-cream"><div class="icon">🔗</div><h3>같은 기록, 여러 기기</h3><p>설정에서 동기화를 켜면 폰에서 한 추출을 태블릿에서도 봅니다. 끄면 그 뒤로는 기기에만 남습니다.</p></div>
+    </div>
+  </section>
+
+  <section class="block faq" id="faq">
+    <h2>자주 묻는 것</h2>
+    <details>
+      <summary>로그인해야 쓸 수 있나요?</summary>
+      <p>아니요. 레시피, 타이머, 분쇄도 측정, 기록까지 로그인 없이 전부 됩니다. 로그인은 여러 기기에서 같은 기록을 보고 싶을 때만 하면 되고, 그때도 이메일 주소만 받습니다.</p>
+    </details>
+    <details>
+      <summary>분쇄도 측정은 정확한가요?</summary>
+      <p>참고용 근사치입니다. 사진 속 100원 동전으로 축척을 잡고 입자를 세기 때문에 촬영 조건과 입자 겹침에 따라 오차가 커집니다. 전문 입도 분석 장비의 결과를 대체하지 않으며, 같은 조건으로 찍어 전후를 견주는 용도로 쓰세요.</p>
+    </details>
+    <details>
+      <summary>찍은 사진은 어디로 가나요?</summary>
+      <p>분석 서버로 보내 계산한 뒤 즉시 버립니다. 데이터베이스나 저장소에 남기지 않고, 기록에는 D50 같은 결과 숫자만 남습니다.</p>
+    </details>
+    <details>
+      <summary>레시피는 누구 것인가요?</summary>
+      <p>원두량 · 물량 · 시간 · 온도 같은 수치 정보를 정리한 자료입니다. 특정 인물, 대회, 장비 제조사와 제휴하거나 보증 관계가 없고, 이름이나 상표를 쓰지 않습니다. 드리퍼는 원뿔형 · 평저 웨이브 · 밸브형 침지 · 뚜껑형처럼 형상으로만 구분합니다.</p>
+    </details>
+    <details>
+      <summary>광고는 어떻게 나오나요?</summary>
+      <p>화면 아래 배너 하나와, 앱을 켤 때 열 번에 한 번 나오는 앱 열기 광고뿐입니다. 타이머 진행 중이나 화면 이동 중에는 전체 화면 광고가 없습니다. 비개인 맞춤 광고가 기본이고, 동의 화면에서 고른 내용은 설정 → 광고 개인정보 옵션에서 다시 바꿀 수 있습니다.</p>
+    </details>
+    <details>
+      <summary>Android 에서도 광고 제거를 살 수 있나요?</summary>
+      <p>아니요. 광고 제거 구매는 App Store(iPhone · iPad)에만 있습니다. Android 에서는 광고를 한 편 보고 24시간 없애는 방법을 쓸 수 있습니다.</p>
+    </details>
+    <details>
+      <summary>기록을 지우려면요?</summary>
+      <p>기기 안 기록은 설정 → 데이터 저장 → 이 기기 기록 삭제. 계정과 서버의 기록은 설정 → 계정 → 계정 삭제로 즉시 지워집니다. 앱에 들어갈 수 없으면 <a href="./account-deletion.html">계정 · 데이터 삭제</a> 안내를 보세요.</p>
+    </details>
+  </section>
+
+  <section class="block" id="support">
+    <div class="contact">
+      <h2>궁금한 점, 불편한 점</h2>
+      <p>이메일로 보내 주세요. 보통 하루 안에 답합니다.</p>
+      <a class="mail" href="mailto:lsj8350@gmail.com">lsj8350@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <p>BrewMate · 문의 <a href="mailto:lsj8350@gmail.com">lsj8350@gmail.com</a></p>
+  <p><a href="./privacy.html">개인정보처리방침</a> · <a href="./terms.html">이용약관</a> · <a href="./account-deletion.html">계정·데이터 삭제</a> · <a href="./oss-licenses.html">오픈소스</a> · <a href="../">다른 앱: 냥냥 배움놀이터</a> · <a href="../howtoo/">하우투</a></p>
+  <p class="fine">분쇄도 측정 결과는 스마트폰 카메라로 계산한 참고용 근사치이며 전문 입도 분석 장비를 대체하지 않습니다. 수록된 레시피는 어떤 인물 · 대회 · 장비 제조사와도 제휴하거나 보증 관계가 없습니다.</p>
+</footer>
+
+</body>
+</html>
