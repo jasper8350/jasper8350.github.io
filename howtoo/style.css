@@ -171,6 +171,18 @@ h1 {
 .badge.ghost { background: var(--card); color: var(--teal); }
 
 /* 칩 */
+/* 히어로 아래 '이 앱이 대신 해 주는 것' 목록. 장점을 첫 화면에서 바로 읽히게 한다. */
+.wins { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 8px; max-width: 34em; }
+.wins li {
+  position: relative; padding-left: 26px; font-size: 15.5px; color: var(--text); line-height: 1.55;
+}
+.wins li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  color: var(--teal); font-weight: 800;
+}
+.wins b { font-weight: 700; }
+@media (max-width: 720px) { .wins li { font-size: 15px; } }
+
 .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
 .chips li {
   font-size: 13px;

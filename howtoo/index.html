@@ -23,6 +23,8 @@
     <a href="#screens">화면</a>
     <a href="#features">기능</a>
     <a href="#card-loan">카드·대출</a>
+    <a href="#grow">점수·뱃지</a>
+    <a href="#learn">금융 학습</a>
     <a href="./guide.html">사용 안내</a>
     <a href="./privacy.html">개인정보</a>
     <a class="lang" href="./en/">English</a>
@@ -37,16 +39,24 @@
       <h1>가계부가 달력을<br>볼 줄 알아야죠</h1>
       <p class="sub">
         카드 결제일이 주말·공휴일에 걸리면 실제로는 다음 영업일에 빠져나갑니다.
-        하우투는 그걸 계산해서 미리 알려줍니다. 그리고 돈 이야기만 하지 않습니다 —
-        그날 왜 그렇게 썼는지, 몸이 어땠는지까지 같이 남깁니다.
+        하우투는 그걸 계산해서 미리 알려줍니다. 카드 취소, 카드 혜택, 대출 이자와 원금 —
+        <b>가계부가 늘 틀리던 것들을 대신 계산합니다.</b>
       </p>
+      <ul class="wins" aria-label="이 앱이 대신 해 주는 것">
+        <li><b>실제 출금일</b>로 계산 — 휴일이면 다음 영업일</li>
+        <li><b>카드 취소</b>가 어느 청구서에서 빠지는지</li>
+        <li><b>어느 카드로 냈어야</b> 가장 좋았는지</li>
+        <li><b>이자와 원금</b>을 갈라서 기록 — 순자산이 정확해집니다</li>
+        <li><b>점수와 뱃지</b> — 이번 주엔 지난주보다 얼마 아꼈는지</li>
+        <li><b>연금·세금을 쉬운 말로</b> — 눈높이 세 단계</li>
+      </ul>
       <div class="badges">
         <a class="badge soon" href="#" aria-disabled="true">Google Play — 준비 중</a>
         <a class="badge soon" href="#" aria-disabled="true">App Store — 준비 중</a>
         <a class="badge ghost" href="./guide.html">사용 안내 보기</a>
       </div>
       <ul class="chips" aria-label="들어 있는 기능">
-        <li>가계부</li><li>소비 일기</li><li>생리 기록</li><li>계산기</li><li>자영업 손익</li><li>투자</li><li>절세</li>
+        <li>가계부</li><li>대출·할부</li><li>카드 혜택</li><li>소비 일기</li><li>생리 기록</li><li>계산기</li><li>자영업 손익</li><li>투자</li><li>절세</li><li>금융 학습</li>
       </ul>
     </div>
     <div class="phone"><img src="./img/shot-dashboard.webp" width="440" height="782" alt="홈 화면 — 비상금 상태, 오늘 지출, 모으기 진행률" /></div>
@@ -64,6 +74,8 @@
       <figure><img src="./img/shot-calculator.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>계산기</figcaption></figure>
       <figure><img src="./img/shot-loans.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>대출·할부</figcaption></figure>
       <figure><img src="./img/shot-benefits.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>카드 혜택</figcaption></figure>
+      <figure><img src="./img/shot-progress.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>내 점수</figcaption></figure>
+      <figure><img src="./img/shot-learn.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>금융 학습</figcaption></figure>
     </div>
   </section>
 
@@ -152,12 +164,27 @@
           <tr>
             <td>디딤돌·버팀목·중기청 대출</td>
             <td class="no">직접 이율·방식을 계산</td>
-            <td class="yes">정부지원 상품까지 골라서 넣습니다 (36종)</td>
+            <td class="yes">정부지원 상품까지 골라서 넣습니다 (37종)</td>
+          </tr>
+          <tr>
+            <td>거치 3년 뒤 상환금이 뛴다</td>
+            <td class="no">닥쳐서야 알게 됨</td>
+            <td class="yes">거치가 끝나면 매달 얼마로 오르는지 지금 알려줍니다</td>
           </tr>
           <tr>
             <td>마이너스통장</td>
             <td class="no">할부처럼 취급되어 계산이 틀림</td>
             <td class="yes">한도와 쓴 만큼의 이자로 따로 계산합니다</td>
+          </tr>
+          <tr>
+            <td>아껴도 티가 안 나 재미가 없다</td>
+            <td class="no">숫자만 쌓임</td>
+            <td class="yes">점수·레벨·뱃지로 보여주고 &lsquo;지난주보다 얼마 아꼈는지&rsquo;를 같은 기간끼리 견줍니다</td>
+          </tr>
+          <tr>
+            <td>연금저축과 IRP가 뭐가 다른지 모름</td>
+            <td class="no">알아서 찾아보라고 함</td>
+            <td class="yes">앱 안에서 눈높이 세 단계로 설명합니다 (초등학생도 읽을 수 있게)</td>
           </tr>
           <tr>
             <td>부부가 각자 IRP·ISA를 굴림</td>
@@ -293,7 +320,7 @@
         <div class="icon">📋</div>
         <span class="tag">35종</span>
         <h3>디딤돌·버팀목·중기청까지</h3>
-        <p>주택담보·집단대출(중도금·잔금)·디딤돌·신생아 특례·생애최초·보금자리론·버팀목·청년전용·중소기업취업청년·캐피탈(신차·중고차)·휴대폰 할부·햇살론·사잇돌·마이너스통장까지 36종을 골라서 넣습니다.</p>
+        <p>주택담보(원리금·원금균등·거치식)·집단대출(중도금·잔금)·디딤돌·신생아 특례·생애최초·보금자리론·버팀목·청년전용·중소기업취업청년·캐피탈(신차·중고차)·휴대폰 할부·햇살론·사잇돌·마이너스통장까지 37종을 골라서 넣습니다. <b>거치기간</b>도 그대로 계산합니다.</p>
       </div>
     </div>
     <div class="note">
@@ -325,6 +352,60 @@
         <h3>각자 쓰고, 합쳐서 보고</h3>
         <p>부부·연인이 각자 장부를 그대로 굴리면서 자산과 흐름만 합쳐 봅니다. 연금·IRP·퇴직연금은 지금 못 쓰는 돈이라 따로 셉니다.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="grow">
+    <h2>계속 하게 만드는 것들</h2>
+    <p class="lead">가계부는 석 달을 못 넘기는 게 보통입니다. 그래서 <b>좋아진 것을 먼저 보여줍니다.</b></p>
+    <div class="grid">
+      <div class="card tint-teal">
+        <div class="icon">📈</div>
+        <span class="tag">주간·월간 비교</span>
+        <h3>이번 주엔 얼마 아꼈나</h3>
+        <p>지난주 같은 요일까지, 지난달 같은 날까지와 견줍니다. 주 중간에 지난주 전체와 비교하면 틀린 말이 되니까요.</p>
+      </div>
+      <div class="card tint-purple">
+        <div class="icon">🏅</div>
+        <span class="tag">점수·레벨·뱃지</span>
+        <h3>돈이 많고 적음으로 매기지 않습니다</h3>
+        <p>기록 습관, 저축률, 예산 지키기, 비상금, 빚 줄이기 — 전부 <b>본인이 바꿀 수 있는 것</b>만 셉니다. 월급 300만원인 사람과 3,000만원인 사람이 같은 점수를 받을 수 있어야 하니까요.</p>
+      </div>
+      <div class="card tint-blue">
+        <div class="icon">🔥</div>
+        <span class="tag">연속 기록</span>
+        <h3>하루 빠져도 끊기지 않아요</h3>
+        <p>완벽하지 않아도 됩니다. 이틀 비어야 처음부터입니다. 못 받은 뱃지도 조건과 진행도를 보여주되 나무라지 않습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="learn">
+    <h2>연금·세금을 쉬운 말로</h2>
+    <p class="lead">연금저축과 IRP가 뭐가 다른지, 퇴직금이 어디로 가는지 모르면 <b>세액공제 900만원을 그냥 흘려보냅니다.</b> 해외주식 팔고 5월에 신고를 안 하면 가산세를 뭅니다.</p>
+    <div class="grid">
+      <div class="card tint-peach">
+        <div class="icon">🪜</div>
+        <span class="tag">눈높이 3단계</span>
+        <h3>쉽게 · 보통 · 자세히</h3>
+        <p>같은 내용을 세 가지로 설명합니다. 초등학생이 읽을 말부터, 실제로 신고할 때 필요한 것까지. 전 연령이 쓰는 앱이니까요.</p>
+      </div>
+      <div class="card tint-teal">
+        <div class="icon">🏛️</div>
+        <span class="tag">공적·퇴직·개인연금</span>
+        <h3>국민·공무원·사학·군인연금</h3>
+        <p>퇴직금 DB와 DC의 차이, 회사에서 받는 IRP와 개인 IRP, 연금저축까지. 2026년 연금개혁으로 바뀐 보험료율과 소득대체율도 반영했습니다.</p>
+      </div>
+      <div class="card tint-blue">
+        <div class="icon">🧾</div>
+        <span class="tag">투자·세금</span>
+        <h3>ISA · 해외주식 양도세</h3>
+        <p>연 250만원 공제 후 22%, 5월에 직접 신고. 손실 상계는 되지만 이월은 안 된다는 것까지. 금융소득종합과세 2,000만원 기준도 함께 봅니다.</p>
+      </div>
+    </div>
+    <div class="note">
+      <b>투자 권유는 하지 않습니다</b>
+      제도를 이해하도록 돕는 참고 자료입니다. 무엇이 세금이 적은지는 사실이지만, 무엇을 사야 하는지는 그 사람 사정입니다. 모든 항목에 기준 시점을 적어 두었고, 제도는 바뀌니 실제로 신고·가입할 때는 다시 확인하시라고 안내합니다.
     </div>
   </section>
 
