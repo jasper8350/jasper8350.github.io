@@ -22,6 +22,7 @@
     <a href="#diff">차이점</a>
     <a href="#screens">화면</a>
     <a href="#features">기능</a>
+    <a href="#card-loan">카드·대출</a>
     <a href="./guide.html">사용 안내</a>
     <a href="./privacy.html">개인정보</a>
     <a class="lang" href="./en/">English</a>
@@ -48,19 +49,21 @@
         <li>가계부</li><li>소비 일기</li><li>생리 기록</li><li>계산기</li><li>자영업 손익</li><li>투자</li><li>절세</li>
       </ul>
     </div>
-    <div class="phone"><img src="./img/shot-dashboard.webp" width="440" height="957" alt="홈 화면 — 비상금 상태, 오늘 지출, 모으기 진행률" /></div>
+    <div class="phone"><img src="./img/shot-dashboard.webp" width="440" height="782" alt="홈 화면 — 비상금 상태, 오늘 지출, 모으기 진행률" /></div>
   </div>
 
   <section aria-label="화면 미리보기" id="screens">
     <div class="strip">
-      <figure><img src="./img/shot-dashboard.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>홈</figcaption></figure>
-      <figure><img src="./img/shot-budget.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>가계부 달력</figcaption></figure>
-      <figure><img src="./img/shot-stats.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>통계</figcaption></figure>
-      <figure><img src="./img/shot-journal.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>소비 일기</figcaption></figure>
-      <figure><img src="./img/shot-cycle.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>생리 기록</figcaption></figure>
-      <figure><img src="./img/shot-accounts.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>자산·카드</figcaption></figure>
-      <figure><img src="./img/shot-business.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>사업 손익</figcaption></figure>
-      <figure><img src="./img/shot-calculator.webp" width="440" height="957" alt="" loading="lazy" /><figcaption>계산기</figcaption></figure>
+      <figure><img src="./img/shot-dashboard.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>홈</figcaption></figure>
+      <figure><img src="./img/shot-budget.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>가계부 달력</figcaption></figure>
+      <figure><img src="./img/shot-stats.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>통계</figcaption></figure>
+      <figure><img src="./img/shot-journal.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>소비 일기</figcaption></figure>
+      <figure><img src="./img/shot-cycle.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>생리 기록</figcaption></figure>
+      <figure><img src="./img/shot-accounts.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>자산·카드</figcaption></figure>
+      <figure><img src="./img/shot-business.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>사업 손익</figcaption></figure>
+      <figure><img src="./img/shot-calculator.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>계산기</figcaption></figure>
+      <figure><img src="./img/shot-loans.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>대출·할부</figcaption></figure>
+      <figure><img src="./img/shot-benefits.webp" width="440" height="782" alt="" loading="lazy" /><figcaption>카드 혜택</figcaption></figure>
     </div>
   </section>
 
@@ -110,6 +113,51 @@
             <td>가게를 하는데 매출만 보임</td>
             <td class="no">가계와 섞여 순이익을 모름</td>
             <td class="yes">사업 장부를 따로 두고 매출−원가−판관비로 계산합니다</td>
+          </tr>
+          <tr>
+            <td>6월에 쓰고 7월에 결제된 게 8월에 취소됨</td>
+            <td class="no">직접 지우거나 마이너스로 적음</td>
+            <td class="yes">취소일이 속한 청구서에서 빼고, 환불이 더 많으면 통장으로 들어온 것으로 처리합니다</td>
+          </tr>
+          <tr>
+            <td>쿠팡에서 여러 건 중 일부만 취소</td>
+            <td class="no">금액을 다시 계산해서 고쳐 적음</td>
+            <td class="yes">부분 취소분만 빼고 남은 금액이 자동으로 맞습니다</td>
+          </tr>
+          <tr>
+            <td>취소가 많아 전월 실적이 모자람</td>
+            <td class="no">실적이 그대로 보임</td>
+            <td class="yes">취소분을 뺀 순액으로 계산합니다 — 마이너스면 그만큼 더 써야 채워집니다</td>
+          </tr>
+          <tr>
+            <td>어느 카드로 낼지 매번 헷갈림</td>
+            <td class="no">감으로 고름</td>
+            <td class="yes">혜택을 등록해 두면 가장 좋았을 카드와 놓친 금액을 알려줍니다 (AI 아님·계산)</td>
+          </tr>
+          <tr>
+            <td>통장에서 30만원이 빠짐</td>
+            <td class="no">이체인지 체크카드인지 구별 안 됨</td>
+            <td class="yes">체크카드를 통장 하위로 묶어 갈라서 보여줍니다</td>
+          </tr>
+          <tr>
+            <td>대출 상환 120만원을 적어야 함</td>
+            <td class="no">전액 지출 — 지출이 부풀고 순자산이 낮게 보임</td>
+            <td class="yes">이자는 지출로, 원금은 이체로 자동 분리합니다</td>
+          </tr>
+          <tr>
+            <td>차를 현금+카드할부+캐피탈로 삼</td>
+            <td class="no">따로따로 적어 총액을 알 수 없음</td>
+            <td class="yes">한 건으로 나눠 담고 &lsquo;이자까지 치면 얼마짜리&rsquo;를 계산합니다</td>
+          </tr>
+          <tr>
+            <td>디딤돌·버팀목·중기청 대출</td>
+            <td class="no">직접 이율·방식을 계산</td>
+            <td class="yes">정부지원 상품까지 골라서 넣습니다 (36종)</td>
+          </tr>
+          <tr>
+            <td>마이너스통장</td>
+            <td class="no">할부처럼 취급되어 계산이 틀림</td>
+            <td class="yes">한도와 쓴 만큼의 이자로 따로 계산합니다</td>
           </tr>
           <tr>
             <td>부부가 각자 IRP·ISA를 굴림</td>
@@ -204,6 +252,53 @@
         <h3>밤에는 저절로 어둡게</h3>
         <p>기기 설정을 따라 밝기가 바뀌고, 강조색은 초록·파랑·자두·모래 중에 고릅니다.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="block" id="card-loan">
+    <h2>카드와 빚, 계산이 제일 까다로운 것들</h2>
+    <p class="lead">가계부가 틀리는 곳은 대체로 여기입니다. 카드 취소, 카드 고르기, 그리고 대출입니다.</p>
+    <div class="grid">
+      <div class="card tint-peach">
+        <div class="icon">↩️</div>
+        <span class="tag">카드 취소</span>
+        <h3>6월에 쓰고 8월에 취소돼도</h3>
+        <p>환불은 취소일이 속한 청구 사이클에서 빠집니다. 부분 취소도, 환불이 사용액보다 많아 통장으로 돌려받는 달도 그대로 처리합니다.</p>
+      </div>
+      <div class="card tint-teal">
+        <div class="icon">💳</div>
+        <span class="tag">카드 고르기</span>
+        <h3>어느 카드로 냈어야 했나</h3>
+        <p>카드 약관의 혜택을 넣어 두면 실제로 받은 금액과 가장 좋았을 카드를 견줘 <b>카드 고르기 점수</b>를 냅니다. 이번 달 한도가 남은 혜택도 짚어 줍니다. AI가 아니라 계산입니다 — 돈 계산은 흔들리면 안 되니까요.</p>
+      </div>
+      <div class="card tint-blue">
+        <div class="icon">🏦</div>
+        <span class="tag">체크카드</span>
+        <h3>이체인지 체크카드인지</h3>
+        <p>체크카드를 통장의 하위로 묶습니다. 통장에서 나간 돈이 이체였는지 카드 사용이었는지 갈라서 보여줍니다.</p>
+      </div>
+      <div class="card tint-purple">
+        <div class="icon">🏠</div>
+        <span class="tag">대출·할부</span>
+        <h3>이자만 진짜 비용입니다</h3>
+        <p>매달 상환액을 이자(지출)와 원금(이체)으로 나눠 적습니다. 원금까지 지출로 세면 그달 지출이 부풀고 순자산이 실제보다 낮게 보이니까요.</p>
+      </div>
+      <div class="card tint-teal">
+        <div class="icon">🚗</div>
+        <span class="tag">나눠 담기</span>
+        <h3>현금 + 카드할부 + 캐피탈</h3>
+        <p>차 한 대를 세 가지로 나눠 샀어도 한 건으로 묶어 관리합니다. <b>이자까지 치면 실제로 얼마짜리인지</b>가 바로 나옵니다. 유예(잔가보장)할부도 그대로 맞습니다.</p>
+      </div>
+      <div class="card tint-peach">
+        <div class="icon">📋</div>
+        <span class="tag">35종</span>
+        <h3>디딤돌·버팀목·중기청까지</h3>
+        <p>주택담보·집단대출(중도금·잔금)·디딤돌·신생아 특례·생애최초·보금자리론·버팀목·청년전용·중소기업취업청년·캐피탈(신차·중고차)·휴대폰 할부·햇살론·사잇돌·마이너스통장까지 36종을 골라서 넣습니다.</p>
+      </div>
+    </div>
+    <div class="note">
+      <b>금리를 긁어오지 않습니다</b>
+      상품마다 소득·자녀 수·우대에 따라 이율이 다르고 자주 바뀝니다. 낡은 숫자로 계산하면 돈 계획을 잘못 세우게 되니, 기본값은 참고용으로만 채우고 계약서의 값을 넣게 합니다. 카드 혜택도 같은 이유로 직접 등록합니다.
     </div>
   </section>
 
