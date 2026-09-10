@@ -490,6 +490,14 @@
     </div>
   </section>
 
+  <section class="block" id="notices">
+    <h2>새 소식</h2>
+    <p class="lead">앱 안 <b>더보기 &gt; 공지사항</b>에서도 같은 글을 보실 수 있습니다.</p>
+    <div id="notice-list" class="grid">
+      <div class="card"><p>불러오는 중…</p></div>
+    </div>
+  </section>
+
   <section class="block faq">
     <h2>자주 묻는 것</h2>
     <details>
@@ -526,5 +534,33 @@
   <p class="fine">본 앱은 투자자문이 아니며, 제공되는 계산과 요약은 개인 판단을 돕기 위한 참고 자료입니다. 생리 기록 기능은 의료기기가 아니며 진단·피임의 근거로 사용할 수 없습니다.</p>
 </footer>
 
+<script>
+  // 공지는 notices.json 한 곳에만 적는다. 앱과 이 페이지가 같은 파일을 읽으므로
+  // 두 곳에 옮겨 적다가 어긋날 일이 없다.
+  // 못 받아와도 페이지는 그대로다 — 공지 때문에 소개 페이지가 깨지면 안 된다.
+  (function () {
+    var box = document.getElementById('notice-list');
+    if (!box) return;
+    var esc = function (t) {
+      return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    };
+    fetch('./notices.json?t=' + Math.floor(Date.now() / 3600000))
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        var rows = (d && d.notices) || [];
+        if (!rows.length) { box.innerHTML = '<div class="card"><p>아직 공지가 없습니다.</p></div>'; return; }
+        box.innerHTML = rows.slice(0, 4).map(function (n) {
+          var body = esc(n.body).split('\n\n').map(function (para) {
+            return '<p>' + para.replace(/\n/g, '<br>') + '</p>';
+          }).join('');
+          return '<div class="card"><span class="tag">' + esc(n.date) + '</span><h3>' +
+            esc(n.title) + '</h3>' + body + '</div>';
+        }).join('');
+      })
+      .catch(function () {
+        box.innerHTML = '<div class="card"><p>지금은 불러오지 못했습니다.</p></div>';
+      });
+  })();
+</script>
 </body>
 </html>
